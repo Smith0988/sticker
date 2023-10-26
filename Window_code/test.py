@@ -1,33 +1,36 @@
-import os
-import sys
+from selenium import webdriver
+from bs4 import BeautifulSoup
 
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
-    try:
-        # Kiểm tra xem chương trình có đang chạy trong môi trường phát triển hay không
-        if getattr(sys, 'frozen', False):
-            # Nếu đang chạy từ tệp thực thi đã xây dựng bởi PyInstaller
-            base_path = sys._MEIPASS
-        else:
-            # Nếu đang chạy trong môi trường phát triển
-            base_path = os.path.abspath(".")
+# Khởi tạo trình duyệt (ở đây là Chrome)
+driver = webdriver.Chrome()
 
-        # Đường dẫn đến thư mục searching_tool trên Desktop
-        desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
-        searching_tool_path = os.path.join(desktop_path, "Searching_Tool")
+# Mở trang web
+url = "https://www.redbubble.com/shop/?query=quote%20sticker&ref=search_box"
+driver.get(url)
 
-        # Tạo thư mục searching_tool nếu nó chưa tồn tại
-        if not os.path.exists(searching_tool_path):
-            os.makedirs(searching_tool_path)
+# Lấy mã HTML của trang web
+html = driver.page_source
 
-        # Đường dẫn tới tài nguyên trong thư mục searching_tool
-        resource_path = os.path.join(searching_tool_path, relative_path)
+# Đóng trình duyệt
+driver.quit()
 
-        return resource_path
-    except Exception as e:
-        print(f"Error in resource_path: {str(e)}")
-        return None
+# Phân tích mã HTML bằng BeautifulSoup
+soup = BeautifulSoup(html, "html.parser")
 
-# Sử dụng resource_path để lấy đường dẫn tới một tài nguyên trong thư mục searching_tool
-file_path = resource_path("sample.docx")
-print(f"Đường dẫn tới tệp Word: {file_path}")
+# Tìm tất cả các thẻ div có class "styles__grid--23xRF"
+divs = soup.find_all("div", class_="styles__grid--23xRF")
+
+# Tạo một danh sách để lưu trữ các liên kết
+all_links = []
+
+# Lặp qua từng thẻ div và tìm các liên kết bên trong
+for div in divs:
+    links = div.find_all("a")
+    for link in links:
+        href = link.get("href")
+        if href is not None:
+            all_links.append(href)
+
+# In danh sách các liên kết
+for link in all_links:
+    print(link)
