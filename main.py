@@ -1,8 +1,15 @@
 from split_sentence import *
 from export_to_photoshop_form import *
+from upload_image_to_github import *
 
 base_data = resource_path("base_data\\sentence_data.txt")
 used_data = resource_path("use_data\\sentence_used.txt")
+
+import shutil
+import os
+
+# Đường dẫn tới tệp ảnh ban đầu
+source_path = resource_path("temp_data/logo.png")
 
 
 def write_sentence_to_file(filename, sentence):
@@ -43,10 +50,27 @@ if list_text:
         i = i + 1
         if i == 3:
             break
+        result_list = []
         write_sentence_to_file(used_data, text)
         list_split, product_name = split_sentence_by_length(text)
         sku = export_file_to_csv(list_split)
+        # Đường dẫn đích cho tệp ảnh mới (với tên mới)
+        new_path = resource_path(sku + ".png")
 
+        # Copy tệp ảnh từ nguồn tới đích
+        shutil.copy(source_path, new_path)
 
-print(sku)
-print(product_name)
+        # Đổi tên tệp ảnh mới
+        image_name = sku + ".png"
+        os.rename(new_path, os.path.join(os.path.dirname(new_path), image_name))
+        link = upload_image(image_name)
+
+        if link:
+            if os.path.exists(image_name):
+                os.remove(image_name)
+
+        result_list.append(sku)
+        result_list.append(product_name)
+        result_list.append(link)
+
+print(result_list)

@@ -3,3 +3,4 @@ venv
 dist
 build
 main_api.spec
+upload_image_to_github.py

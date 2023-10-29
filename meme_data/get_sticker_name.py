@@ -51,7 +51,7 @@ def get_sticker_text(url):
         for text in all_text:
             file.write(text + "\n")
 
-# Mở trang web
-for page in range(1, 101):
-    url = f"https://www.redbubble.com/shop/?page={page}&query=quote%20sticker"
-    get_sticker_text(url)
+if __name__ == "__main__":
+    for page in range(1, 101):
+        url = f"https://www.redbubble.com/shop/?page={page}&query=quote%20sticker"
+        get_sticker_text(url)
