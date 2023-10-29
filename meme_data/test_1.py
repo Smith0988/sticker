@@ -1,5 +1,7 @@
 import os
 import sys
+
+import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -26,15 +28,19 @@ def write_lines_to_text_file(lines, file_path):
 
 def get_link_reddit():
     url = "https://www.reddit.com"
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    driver = webdriver.Chrome(options=chrome_options)
-    driver.get(url)
-    html = driver.page_source
+    #driver = webdriver.Edge()
+    #driver.get("about:blank")  # Mở một trang trắng
+    #chrome_options = Options()
+    #chrome_options.add_argument("--headless")
+    #driver = webdriver.Chrome(options=chrome_options)
+    #driver = webdriver.Chrome()
+    #driver.get(url)
+    response = requests.get(url)
+    #html = driver.page_source
     raw_link = []
     raw_view = []
-    if html:
-        soup = BeautifulSoup(html, "html.parser")
+    if 1:
+        soup = BeautifulSoup(response.text, "html.parser")
         div_outer = soup.find_all("div", class_="rpBJOHq2PR60pnwJlUyP0")
 
         for div_element in div_outer:
