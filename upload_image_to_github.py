@@ -8,7 +8,7 @@ import requests
 repo_owner = "Smith0988"
 repo_name = "sticker_image"
 # Token truy cập GitHub
-access_token = "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"
+access_token = ""
 
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
