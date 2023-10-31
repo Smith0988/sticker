@@ -1,3 +1,5 @@
+import time
+
 from split_sentence import *
 from export_to_photoshop_form import *
 from upload_image_to_github import *
@@ -48,12 +50,15 @@ if list_text:
     i = 1
     for text in list_text:
         i = i + 1
-        if i == 3:
+        if i == 200:
             break
         result_list = []
         write_sentence_to_file(used_data, text)
         list_split, product_name = split_sentence_by_length(text)
         sku = export_file_to_csv(list_split)
+
+        time.sleep(1)
+        """
         # Đường dẫn đích cho tệp ảnh mới (với tên mới)
         new_path = resource_path(sku + ".png")
 
@@ -72,5 +77,7 @@ if list_text:
         result_list.append(sku)
         result_list.append(product_name)
         result_list.append(link)
+        """
+
 
 print(result_list)

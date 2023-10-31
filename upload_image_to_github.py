@@ -54,6 +54,6 @@ def upload_image(file_name):
         return []
 
 if __name__ == "__main__":
-    file_name = "logo_3.png"
+    file_name = "logo_5.png"
     result = upload_image(file_name)
     print(result)

@@ -17,6 +17,7 @@ name_size_2 = resource_path("temp_data\\NameSize_2.csv")
 name_size_3 = resource_path("temp_data\\NameSize_3.csv")
 
 
+
 def create_sku_code():
     now = datetime.now()
     day = now.day
@@ -28,8 +29,12 @@ def create_sku_code():
     formatted_hour = f"{hour:02}"
     minute = now.minute
     formatted_minute = f"{minute:02}"
-    sku = "ST" + str(year) + formatted_month + formatted_day + "_" + formatted_hour + formatted_minute
+    second = now.second
+    formatted_second = f"{second:02}"
+
+    sku = "ST" + str(year) + formatted_month + formatted_day + "_" + formatted_hour + formatted_minute + formatted_second
     return sku
+
 
 def export_file_to_csv(list_text):
 
@@ -44,17 +49,17 @@ def export_file_to_csv(list_text):
         result_list.append(list)
 
     if len(list_text) == 2:
-        with open(name_size_2, mode='w', newline='') as file:
+        with open(name_size_2, mode='a', newline='') as file:
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             # Ghi hàng 1 từ list1
-            writer.writerow(list2)
+            #writer.writerow(list2)
             # Ghi hàng 2 từ list2
             writer.writerow(result_list)
     if len(list_text) == 3:
-        with open(name_size_3, mode='w', newline='') as file:
+        with open(name_size_3, mode='a', newline='') as file:
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             # Ghi hàng 1 từ list1
-            writer.writerow(list3)
+            #writer.writerow(list3)
             # Ghi hàng 2 từ list2
             writer.writerow(result_list)
     return sku
