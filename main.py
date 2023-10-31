@@ -6,6 +6,7 @@ from upload_image_to_github import *
 
 base_data = resource_path("base_data\\sentence_data.txt")
 used_data = resource_path("use_data\\sentence_used.txt")
+temp_used_data = resource_path("use_data\\temp_sentence_used.txt")
 
 import shutil
 import os
@@ -21,6 +22,12 @@ def write_sentence_to_file(filename, sentence):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
+def write_sentence_to_file_temp(filename, sentence):
+    try:
+        with open(filename, 'w') as file:
+            file.write(sentence + '\n')
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
 
 def read_sentences_from_file(filename):
     try:
@@ -44,6 +51,10 @@ def find_unmatched_sentences(data_filename, used_filename):
 
     return unmatched_sentences
 
+list2 = ['SKU', 'Name1', 'Name2']
+with open(name_size_2, mode='w', newline='') as file:
+    writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(list2)
 
 list_text = find_unmatched_sentences(base_data, used_data)
 if list_text:
@@ -54,6 +65,7 @@ if list_text:
             break
         result_list = []
         write_sentence_to_file(used_data, text)
+        write_sentence_to_file_temp(temp_used_data, text)
         list_split, product_name = split_sentence_by_length(text)
         sku = export_file_to_csv(list_split)
 
