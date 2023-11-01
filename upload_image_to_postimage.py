@@ -1,28 +1,36 @@
-import pyautogui as pyautogui
+import pyautogui
+import pyperclip
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-# Khởi tạo trình duyệt Microsoft Edge
-driver = webdriver.Edge()
+def upload_image_to_postimage(link_image):
+    driver = webdriver.Edge()
+    driver.get("https://postimages.org/")
 
-# Mở trang web Postimage
-driver.get("https://postimages.org/")
+    wait = WebDriverWait(driver, 60)
 
-# Sử dụng XPath để tìm nút "Choose Images"
-upload_button = driver.find_element(By.XPATH, "//nav[@class='mainmenu']//a[normalize-space()='Upload by URL']")
+    upload_button  = wait.until(EC.presence_of_element_located((By.XPATH, "//span[@id='uploadFile']")))
+    upload_button .click()
+    pyautogui.sleep(2)
 
-# Nhấp vào nút "Choose Images"
-upload_button.click()
+    pyautogui.write(link_image)
+    pyautogui.sleep(2)
+    pyautogui.press("enter")
 
-# Tải lên tệp ảnh
-# Chờ cho hộp thoại mở ra để chọn tệp ảnh
-pyautogui.sleep(2)  # Chờ 2 giây
+    wait = WebDriverWait(driver, 60)
+    copy_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@data-clipboard-target='#code_html']")))
+    copy_button.click()
+    pyautogui.sleep(2)
 
-# Nhấp vào ô nhập tệp
-pyautogui.click(x, y)  # Thay (x, y) bằng tọa độ của ô nhập tệp
+    copied_text = pyperclip.paste()
+    pyautogui.sleep(2)
+    driver.quit()
 
-# Đợi cho việc tải lên hoàn thành (có thể sử dụng explicit wait)
-# Sau khi tải lên, bạn có thể lấy URL của ảnh được tải lên.
+    return copied_text
 
-# Đóng trình duyệt
-driver.quit()
+if __name__ == "__main__":
+    link = "D:\\1.Github\sticker\\temp_data\\logo.png"
+    result = upload_image_to_postimage(link)
+    print(result)

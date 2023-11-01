@@ -1,37 +1,55 @@
-import base64
+import pyautogui
+import pyperclip
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-import requests
+# Khởi tạo trình duyệt Microsoft Edge
+driver = webdriver.Edge()
 
-# Thông tin kho lưu trữ (repository) trên GitHub
-repo_owner = "Smith0988"
-repo_name = "sticker_image"
+# Mở trang web Postimage
+driver.get("https://postimages.org/")
 
-# Tên tệp ảnh bạn muốn tải lên
-file_name = "logo_1.png"
+# Sử dụng XPath để tìm nút "Choose Images"
+#upload_button = driver.find_element(By.XPATH, "//span[@id='uploadFile']")
 
-# Token truy cập GitHub
-access_token = ""
+# Nhấp vào nút "Choose Images"
+#upload_button.click()
 
-# Đường dẫn API để tạo một tệp mới
-upload_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_name}"
+wait = WebDriverWait(driver, 60)
 
-# Đọc dữ liệu tệp ảnh
-with open(file_name, "rb") as image_file:
-    image_data = base64.b64encode(image_file.read()).decode('utf-8')
+# Tạo điều kiện đợi: Đợi cho phần tử được tìm thấy bằng XPath
+upload_button  = wait.until(EC.presence_of_element_located((By.XPATH, "//span[@id='uploadFile']")))
+upload_button .click()
 
-# Tạo yêu cầu PUT để tải ảnh lên
-headers = {
-    "Authorization": f"token {access_token}",
-    "Content-Type": "application/json"
-}
-data = {
-    "message": "Upload an image",
-    "content": image_data
-}
-response = requests.put(upload_url, headers=headers, json=data)
 
-if response.status_code == 201:
-    print("Tải ảnh lên thành công.")
-else:
-    print("Lỗi khi tải ảnh lên GitHub.")
-    print("Response content:", response.content)
+# Tải lên tệp ảnh
+# Chờ cho hộp thoại mở ra để chọn tệp ảnh
+pyautogui.sleep(2)  # Chờ 2 giây
+
+# Ghi đường dẫn tệp cần tải lên
+pyautogui.write("D:\\1.Github\sticker\\temp_data\\logo.png")
+
+pyautogui.sleep(2)
+
+# Nhấp Enter để mở tệp
+pyautogui.press("enter")
+
+# Tạo một đối tượng WebDriverWait với thời gian tối đa 30 giây
+wait = WebDriverWait(driver, 60)
+
+# Tạo điều kiện đợi: Đợi cho phần tử được tìm thấy bằng XPath
+copy_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@data-clipboard-target='#code_html']")))
+copy_button.click()
+
+# Lấy văn bản (text) của phần tử
+pyautogui.sleep(2)
+
+copied_text = pyperclip.paste()
+pyautogui.sleep(2)
+
+print(copied_text)
+
+# Đóng trình duyệt
+driver.quit()
