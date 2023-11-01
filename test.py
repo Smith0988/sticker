@@ -10,7 +10,7 @@ repo_name = "sticker_image"
 file_name = "logo_1.png"
 
 # Token truy cập GitHub
-access_token = "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"
+access_token = ""
 
 # Đường dẫn API để tạo một tệp mới
 upload_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_name}"
