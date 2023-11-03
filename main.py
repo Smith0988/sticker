@@ -51,45 +51,59 @@ def find_unmatched_sentences(data_filename, used_filename):
 
     return unmatched_sentences
 
-list2 = ['SKU', 'Name1', 'Name2']
-with open(name_size_2, mode='w', newline='') as file:
-    writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(list2)
+def create_csv_to_photo():
 
-list_text = find_unmatched_sentences(base_data, used_data)
-if list_text:
-    i = 1
-    for text in list_text:
-        i = i + 1
-        if i == 200:
-            break
-        result_list = []
-        write_sentence_to_file(used_data, text)
-        write_sentence_to_file_temp(temp_used_data, text)
-        list_split, product_name = split_sentence_by_length(text)
-        sku = export_file_to_csv(list_split)
-
-        time.sleep(1)
-        """
-        # Đường dẫn đích cho tệp ảnh mới (với tên mới)
-        new_path = resource_path(sku + ".png")
-
-        # Copy tệp ảnh từ nguồn tới đích
-        shutil.copy(source_path, new_path)
-
-        # Đổi tên tệp ảnh mới
-        image_name = sku + ".png"
-        os.rename(new_path, os.path.join(os.path.dirname(new_path), image_name))
-        link = upload_image(image_name)
-
-        if link:
-            if os.path.exists(image_name):
-                os.remove(image_name)
-
-        result_list.append(sku)
-        result_list.append(product_name)
-        result_list.append(link)
-        """
+    sku_csv = create_sku_code()
+    sku_csv_2 = sku_csv + "_2.csv"
+    sku_csv_3 = sku_csv + "_3.csv"
+    list_text = find_unmatched_sentences(base_data, used_data)
+    if list_text:
+        list2 = ['SKU', 'Name1', 'Name2']
+        list3 = ['SKU', 'Name1', 'Name2', 'Name3']
+        with open(name_size_2, mode='w', newline='') as file:
+            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            writer.writerow(list2)
+        with open(name_size_3, mode='w', newline='') as file:
+            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            writer.writerow(list3)
 
 
-print(result_list)
+        write_sentence_to_file_temp(temp_used_data, "")
+
+    if list_text:
+        sku_list = []
+        product_name_list = []
+        i = 1
+        for text in list_text:
+            i = i + 1
+            if i == 200:
+                break
+
+            write_sentence_to_file(used_data, text)
+            write_sentence_to_file(temp_used_data, text)
+            list_split, product_name = split_sentence_by_length(text)
+            sku = export_file_to_csv(list_split)
+            time.sleep(1)
+            sku_list.append(sku)
+            product_name_list.append(product_name)
+
+    new_name_2 = resource_path(f"temp_data\\{sku_csv_2}.csv")
+    os.rename(name_size_2, new_name_2)
+
+    new_name_3 = resource_path(f"temp_data\\{sku_csv_3}.csv")
+    os.rename(name_size_3, new_name_3)
+
+    return sku_list, product_name_list
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    sku_list, product_name_list = create_csv_to_photo()
+    print(sku_list)
+    print(product_name_list)
+
+

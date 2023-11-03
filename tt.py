@@ -1,7 +1,7 @@
 import pyautogui
 
 
-pyautogui.sleep(2)  # Chờ 2 giây
+pyautogui.sleep(3)  # Chờ 2 giây
 # Lấy tọa độ hiện tại của con trỏ chuột
 x, y = pyautogui.position()
 
