@@ -22,21 +22,21 @@ name_size_4 = resource_path("temp_data\\NameSize_4.csv")
 
 def create_name_size_2():
     list_2 = ['SKU', 'Name1', 'Name2']
-    with open(name_size_2, mode='a', newline='') as file:
+    with open(name_size_2, mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(list_2)
 
 
 def create_name_size_3():
     list_3 = ['SKU', 'Name1', 'Name2', 'Name3']
-    with open(name_size_3, mode='w', newline='') as file:
+    with open(name_size_3, mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(list_3)
 
 
 def create_name_size_4():
     list_4 = ['SKU', 'Name1', 'Name2', 'Name3', 'Name4']
-    with open(name_size_4, mode='w', newline='') as file:
+    with open(name_size_4, mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(list_4)
 
@@ -72,7 +72,7 @@ def export_file_to_csv(list_text):
         if not os.path.exists(name_size_2):
             create_name_size_2()
 
-        with open(name_size_2, mode='a', newline='') as file:
+        with open(name_size_2, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
@@ -80,7 +80,7 @@ def export_file_to_csv(list_text):
         if not os.path.exists(name_size_3):
             create_name_size_3()
 
-        with open(name_size_3, mode='a', newline='') as file:
+        with open(name_size_3, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
@@ -88,7 +88,7 @@ def export_file_to_csv(list_text):
         if not os.path.exists(name_size_4):
             create_name_size_4()
 
-        with open(name_size_4, mode='a', newline='') as file:
+        with open(name_size_4, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
     return sku
