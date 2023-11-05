@@ -22,12 +22,14 @@ def write_sentence_to_file(filename, sentence):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
+
 def write_sentence_to_file_temp(filename, sentence):
     try:
         with open(filename, 'w') as file:
             file.write(sentence + '\n')
     except Exception as e:
         print(f"An error occurred: {str(e)}")
+
 
 def read_sentences_from_file(filename):
     try:
@@ -51,32 +53,58 @@ def find_unmatched_sentences(data_filename, used_filename):
 
     return unmatched_sentences
 
+
+def move_txt_temp_file():
+    # Đường dẫn đến tệp cần di chuyển
+    source_file = temp_used_data
+
+    # Đường dẫn đến thư mục đích
+    destination_directory = r"C:\Users\Cong Dinh\Desktop\Sticker Image\temp_data"
+
+    # Kiểm tra xem tệp nguồn tồn tại
+    if os.path.exists(source_file):
+        # Kiểm tra xem thư mục đích tồn tại, nếu không tồn tại thì tạo thư mục đích
+        if not os.path.exists(destination_directory):
+            os.makedirs(destination_directory)
+
+        # Đường dẫn đầy đủ đến tệp trong thư mục đích
+        destination_file = os.path.join(destination_directory, "temp_sentence_used.txt")
+
+        # Di chuyển tệp từ nguồn sang đích
+        shutil.move(source_file, destination_file)
+
+
+def move_csv_temp_file(file):
+    # Đường dẫn đến tệp cần di chuyển
+    source_file = resource_path(f"temp_data\\{file}")
+
+    # Đường dẫn đến thư mục đích
+    destination_directory =  r"C:\Users\Cong Dinh\Desktop\Sticker Image\temp_data"
+
+    # Kiểm tra xem tệp nguồn tồn tại
+    if os.path.exists(source_file):
+        # Kiểm tra xem thư mục đích tồn tại, nếu không tồn tại thì tạo thư mục đích
+        if not os.path.exists(destination_directory):
+            os.makedirs(destination_directory)
+
+        # Đường dẫn đầy đủ đến tệp trong thư mục đích
+        destination_file = os.path.join(destination_directory, f"{file}")
+
+        # Di chuyển tệp từ nguồn sang đích
+        shutil.move(source_file, destination_file)
+
 def create_csv_to_photo():
 
-    sku_csv = create_sku_code()
-    sku_csv_2 = sku_csv + "_2.csv"
-    sku_csv_3 = sku_csv + "_3.csv"
+    sku_list = []
+    product_name_list = []
     list_text = find_unmatched_sentences(base_data, used_data)
     if list_text:
-        list2 = ['SKU', 'Name1', 'Name2']
-        list3 = ['SKU', 'Name1', 'Name2', 'Name3']
-        with open(name_size_2, mode='w', newline='') as file:
-            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            writer.writerow(list2)
-        with open(name_size_3, mode='w', newline='') as file:
-            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            writer.writerow(list3)
-
-
         write_sentence_to_file_temp(temp_used_data, "")
 
-    if list_text:
-        sku_list = []
-        product_name_list = []
         i = 1
         for text in list_text:
             i = i + 1
-            if i == 200:
+            if i == 300:
                 break
 
             write_sentence_to_file(used_data, text)
@@ -87,23 +115,24 @@ def create_csv_to_photo():
             sku_list.append(sku)
             product_name_list.append(product_name)
 
-    new_name_2 = resource_path(f"temp_data\\{sku_csv_2}.csv")
-    os.rename(name_size_2, new_name_2)
 
-    new_name_3 = resource_path(f"temp_data\\{sku_csv_3}.csv")
-    os.rename(name_size_3, new_name_3)
+    if os.path.exists(name_size_2):
+        move_csv_temp_file("NameSize_2.csv")
+
+    if os.path.exists(name_size_3):
+        move_csv_temp_file("NameSize_3.csv")
+
+    if os.path.exists(name_size_4):
+        move_csv_temp_file("NameSize_4.csv")
+
+    if os.path.exists(temp_used_data):
+        move_txt_temp_file()
+
 
     return sku_list, product_name_list
-
-
-
-
-
 
 
 if __name__ == "__main__":
     sku_list, product_name_list = create_csv_to_photo()
     print(sku_list)
     print(product_name_list)
-
-

@@ -1,10 +1,6 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
-
-import chromedriver_autoinstaller
 from selenium import webdriver
-
-chromedriver_autoinstaller.install()  # Cài đặt ChromeDriver
 
 # Khởi tạo trình duyệt Chrome
 driver = webdriver.Chrome()
@@ -14,6 +10,9 @@ driver = webdriver.Chrome()
 
 
 def get_sticker_text(url):
+
+    driver = webdriver.Chrome()
+    driver.get("https://postimages.org")
     driver.get(url)
 
     # Lấy mã HTML của trang web

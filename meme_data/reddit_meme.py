@@ -1,5 +1,7 @@
 import os
 import sys
+import time
+
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -29,21 +31,31 @@ def write_lines_to_text_file(lines, file_path):
     except Exception as e:
         print("Có lỗi khi ghi các lít vào tệp:", str(e))
 
+
+
 def get_link_reddit():
-    url = "https://www.reddit.com/t/memes/"
+
+    driver = webdriver.Chrome()
+    driver.get("https://www.reddit.com/?onetap_auto=true")
+    time.sleep(10000)
+
+
+    """
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
     html = driver.page_source
+
+
+
     raw_link = []
     raw_view = []
     if html:
+
         soup = BeautifulSoup(html, "html.parser")
 
         section_1 = soup.find_all("section", {"slot": "page-1"})
-
 
         for section in section_1:
 
@@ -58,11 +70,11 @@ def get_link_reddit():
                 if href:
                     raw_link.append("https://www.reddit.com" + href)
 
-        write_lines_to_text_file(raw_view, raw_view_file)
-        write_lines_to_text_file(raw_link, reddit_raw_link)
+        #write_lines_to_text_file(raw_view, raw_view_file)
+        #write_lines_to_text_file(raw_link, reddit_raw_link)
 
     else:
         print("Yêu cầu không thành công. Mã trạng thái:")
-
+    """
 
 get_link_reddit()

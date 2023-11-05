@@ -3,16 +3,16 @@ import subprocess
 import time
 
 # Mở Photoshop bằng lệnh thực thi
-subprocess.Popen("C:\\Program Files\\Adobe\\Adobe Photoshop 2020\\Photoshop.exe")
+subprocess.Popen("E:\\0.Sticker\\0. Phan Mem\\Photoshop CS6x64Portable\\App\\Ps\\Photoshop.exe")
 
 # Đợi một khoảng thời gian để Photoshop khởi động (thời gian này có thể cần điều chỉnh)
-time.sleep(3)
+time.sleep(10)
 
 # Sử dụng pyautogui để thực hiện các thao tác nhấn phím và chuột
 # Ví dụ: mở một tệp ảnh
 pyautogui.hotkey("ctrl", "o")
 time.sleep(2)
-pyautogui.typewrite("D:\\1.Github\\sticker\\logo_5.png")
+pyautogui.typewrite("C:\\Users\\Cong Dinh\\Desktop\\BumperSticker_2x2.psd")
 pyautogui.press("enter")
 
 time.sleep(10)

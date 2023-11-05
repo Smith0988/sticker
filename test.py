@@ -1,55 +1,24 @@
-import pyautogui
-import pyperclip
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+import os
+import shutil
 
-# Khởi tạo trình duyệt Microsoft Edge
-driver = webdriver.Edge()
+# Đường dẫn đến tệp cần di chuyển
+source_file = r"C:\Users\Cong Dinh\Documents\GitHub\sticker\temp_form.xlsx"
 
-# Mở trang web Postimage
-driver.get("https://postimages.org/")
+# Đường dẫn đến thư mục đích
+destination_directory = r"C:\Users\Cong Dinh\Desktop\Sticker Image\temp_data"
 
-# Sử dụng XPath để tìm nút "Choose Images"
-#upload_button = driver.find_element(By.XPATH, "//span[@id='uploadFile']")
+# Kiểm tra xem tệp nguồn tồn tại
+if os.path.exists(source_file):
+    # Kiểm tra xem thư mục đích tồn tại, nếu không tồn tại thì tạo thư mục đích
+    if not os.path.exists(destination_directory):
+        os.makedirs(destination_directory)
 
-# Nhấp vào nút "Choose Images"
-#upload_button.click()
+    # Đường dẫn đầy đủ đến tệp trong thư mục đích
+    destination_file = os.path.join(destination_directory, "temp_form.xlsx")
 
-wait = WebDriverWait(driver, 60)
+    # Di chuyển tệp từ nguồn sang đích
+    shutil.move(source_file, destination_file)
 
-# Tạo điều kiện đợi: Đợi cho phần tử được tìm thấy bằng XPath
-upload_button  = wait.until(EC.presence_of_element_located((By.XPATH, "//span[@id='uploadFile']")))
-upload_button .click()
-
-
-# Tải lên tệp ảnh
-# Chờ cho hộp thoại mở ra để chọn tệp ảnh
-pyautogui.sleep(2)  # Chờ 2 giây
-
-# Ghi đường dẫn tệp cần tải lên
-pyautogui.write("D:\\1.Github\sticker\\temp_data\\logo.png")
-
-pyautogui.sleep(2)
-
-# Nhấp Enter để mở tệp
-pyautogui.press("enter")
-
-# Tạo một đối tượng WebDriverWait với thời gian tối đa 30 giây
-wait = WebDriverWait(driver, 60)
-
-# Tạo điều kiện đợi: Đợi cho phần tử được tìm thấy bằng XPath
-copy_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@data-clipboard-target='#code_html']")))
-copy_button.click()
-
-# Lấy văn bản (text) của phần tử
-pyautogui.sleep(2)
-
-copied_text = pyperclip.paste()
-pyautogui.sleep(2)
-
-print(copied_text)
-
-# Đóng trình duyệt
-driver.quit()
+    print(f"Di chuyển tệp thành công.")
+else:
+    print(f"Tệp nguồn không tồn tại.")
