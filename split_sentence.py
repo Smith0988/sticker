@@ -1,11 +1,5 @@
 import re
 
-
-
-
-
-
-
 def split_sentence_by_length(text):
 
 
@@ -16,6 +10,13 @@ def split_sentence_by_length(text):
         one_half = num_words // 2
         first_half = ' '.join(words[:one_half])
         second_half = ' '.join(words[one_half:])
+        if len(second_half) > len(first_half) +10:
+            word_1 = first_half.split()
+            word_2 = second_half.split()
+            word_1.append(word_2[0])
+            word_2 = word_2[1:]
+            first_half = ' '.join(word_1)
+            second_half = ' '.join(word_2)
         split = [first_half, second_half]
         product_name = "2Pcs - 5IN " + sentence + " Bumper Sticker" + " - " + sentence + " Sticker"
     elif len(sentence) > 35 and len(sentence) <= 52:

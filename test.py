@@ -1,24 +1,61 @@
-import os
-import shutil
+import re
 
-# Đường dẫn đến tệp cần di chuyển
-source_file = r"C:\Users\Cong Dinh\Documents\GitHub\sticker\temp_form.xlsx"
+def split_sentence_by_length(text):
 
-# Đường dẫn đến thư mục đích
-destination_directory = r"C:\Users\Cong Dinh\Desktop\Sticker Image\temp_data"
 
-# Kiểm tra xem tệp nguồn tồn tại
-if os.path.exists(source_file):
-    # Kiểm tra xem thư mục đích tồn tại, nếu không tồn tại thì tạo thư mục đích
-    if not os.path.exists(destination_directory):
-        os.makedirs(destination_directory)
+    sentence = re.sub(r'\s+', ' ', text).strip()
+    if len(sentence) <= 35:
+        words = sentence.split()
+        num_words = len(words)
+        one_half = num_words // 2
+        first_half = ' '.join(words[:one_half])
+        second_half = ' '.join(words[one_half:])
+        if len(second_half) > len(first_half) +10:
+            word_1 = first_half.split()
+            word_2 = second_half.split()
+            word_1.append(word_2[0])
+            word_2 = word_2[1:]
+            first_half = ' '.join(word_1)
+            second_half = ' '.join(word_2)
 
-    # Đường dẫn đầy đủ đến tệp trong thư mục đích
-    destination_file = os.path.join(destination_directory, "temp_form.xlsx")
 
-    # Di chuyển tệp từ nguồn sang đích
-    shutil.move(source_file, destination_file)
 
-    print(f"Di chuyển tệp thành công.")
-else:
-    print(f"Tệp nguồn không tồn tại.")
+        split = [first_half, second_half]
+        product_name = "2Pcs - 5IN " + sentence + " Bumper Sticker" + " - " + sentence + " Sticker"
+    elif len(sentence) > 35 and len(sentence) <= 52:
+        words = sentence.split()
+        num_words = len(words)
+        one_third = num_words // 3
+        two_thirds = 2 * one_third
+        first_third = ' '.join(words[:one_third])
+        second_third = ' '.join(words[one_third:two_thirds])
+        last_third = ' '.join(words[two_thirds:])
+        split = [first_third, second_third, last_third]
+        product_name = "2Pcs - 5IN " + sentence + " Bumper Sticker" + " - " + sentence + " Sticker"
+    else:
+        words = sentence.split()
+        num_words = len(words)
+        one_fourth = num_words // 4
+        two_fourths = 2 * one_fourth
+        three_fourths = 3 * one_fourth
+        first_part = ' '.join(words[:one_fourth])
+        second_part = ' '.join(words[one_fourth:two_fourths])
+        third_part = ' '.join(words[two_fourths:three_fourths])
+        last_part = ' '.join(words[three_fourths:])
+        split = [first_part, second_part, third_part, last_part]
+        product_name = "2Pcs - 5IN " + first_part + " " + second_part + " Bumper Sticker" + " - " + first_part + " " + second_part + " Sticker"
+
+
+
+    split = [item.upper() for item in split]
+
+    return split, product_name
+
+
+if __name__ == "__main__":
+
+    english_sentence = "Her? Arrested Development"
+    result, product_name = split_sentence_by_length(english_sentence)
+
+    print(result)
+    print(product_name)
