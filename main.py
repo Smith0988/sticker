@@ -48,6 +48,7 @@ def find_unmatched_sentences(data_filename, used_filename):
     unmatched_sentences = []
 
     for sentence in data_sentences:
+        sentence = sentence.strip()
         if sentence not in used_sentences:
             unmatched_sentences.append(sentence)
 

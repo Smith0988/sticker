@@ -1,15 +1,14 @@
+import csv
 import os
+import subprocess
 import sys
-import time
-
 import pyautogui
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver import Keys
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
@@ -26,6 +25,19 @@ reddit_raw_link = resource_path("temp_data/reddit_raw_link.txt")
 raw_view_file = resource_path("temp_data/raw_view_file.txt")
 
 
+def write_list_to_csv(list1, list2):
+    try:
+        with open("ouput.csv", mode='a', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+
+            for item1, item2 in zip(list1, list2):
+                writer.writerow([item1, item2])
+
+        print(f"Đã ghi dữ liệu vào file CSV: ")
+    except Exception as e:
+        print(f"Có lỗi xảy ra: {str(e)}")
+
+
 def write_lines_to_text_file(lines, file_path):
     try:
         with open(file_path, 'a') as file:  # Mở tệp ở chế độ ghi thêm ('a')
@@ -33,8 +45,8 @@ def write_lines_to_text_file(lines, file_path):
     except Exception as e:
         print("Có lỗi khi ghi các lít vào tệp:", str(e))
 
-def get_memes_links():
 
+def get_memes_links():
     driver = webdriver.Chrome()
     driver.get("https://twitter.com/search?q=memes&src=typed_query")
 
@@ -45,11 +57,11 @@ def get_memes_links():
     pyautogui.write("utester.9001@gmail.com")
 
     wait = WebDriverWait(driver, 60)
-    upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
+    upload_button = wait.until(EC.presence_of_element_located((By.XPATH,
+                                                               "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
     upload_button.click()
     pyautogui.sleep(1)
     pyautogui.write("@Smith53017960")
-
 
     wait = WebDriverWait(driver, 60)
     upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Next')]")))
@@ -58,8 +70,11 @@ def get_memes_links():
     pyautogui.write("Chung.241089")
 
     wait = WebDriverWait(driver, 60)
-    upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
+    upload_button = wait.until(EC.presence_of_element_located((By.XPATH,
+                                                               "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
     upload_button.click()
+
+    pyautogui.sleep(180)
 
     for i in range(1000):
         pyautogui.press('down')
@@ -68,8 +83,6 @@ def get_memes_links():
 
     # Lấy mã nguồn HTML của trang
     html_source = driver.page_source
-    with open("ten_tep.html", "w", encoding="utf-8") as file:
-        file.write(html_source)
 
     # Sử dụng BeautifulSoup để phân tích HTML
     soup = BeautifulSoup(html_source, 'html.parser')
@@ -92,7 +105,7 @@ def get_memes_links():
             for link_element in link_elements:
                 link_url = link_element.get('href')
                 if link_url:
-                    link = "https://twitter.com"+link_url
+                    link = "https://twitter.com" + link_url
                     all_link.append(link)
 
     driver.quit()
@@ -101,7 +114,6 @@ def get_memes_links():
 
 
 def get_views():
-
     driver = webdriver.Chrome()
     driver.get("https://twitter.com/meme_ki_diwani/status/1721074953179595030")
 
@@ -128,35 +140,33 @@ def get_views():
 
 
 def get_view_new():
-
     driver = webdriver.Chrome()
     driver.get("https://twitter.com/search?q=memes&src=typed_query")
 
-    #wait = WebDriverWait(driver, 200)
-    #upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@name='text']")))
-    #upload_button.click()
-    #pyautogui.sleep(1)
-    #pyautogui.write("utester.9001@gmail.com")
+    # wait = WebDriverWait(driver, 200)
+    # upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@name='text']")))
+    # upload_button.click()
+    # pyautogui.sleep(1)
+    # pyautogui.write("utester.9001@gmail.com")
 
-   # wait = WebDriverWait(driver, 200)
-    #upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
-    #upload_button.click()
-    #pyautogui.sleep(1)
-    #pyautogui.write("@Smith53017960")
+    # wait = WebDriverWait(driver, 200)
+    # upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
+    # upload_button.click()
+    # pyautogui.sleep(1)
+    # pyautogui.write("@Smith53017960")
 
+    # wait = WebDriverWait(driver, 200)
+    # upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Next')]")))
+    # upload_button.click()
+    # pyautogui.sleep(1)
+    # pyautogui.write("Chung.241089")
 
-    #wait = WebDriverWait(driver, 200)
-    #upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Next')]")))
-    #upload_button.click()
-    #pyautogui.sleep(1)
-    #pyautogui.write("Chung.241089")
+    # wait = WebDriverWait(driver, 60)
+    # upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
+    # upload_button.click()
 
-    #wait = WebDriverWait(driver, 60)
-    #upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
-    #upload_button.click()
-
-    #for i in range(10):
-        #pyautogui.press('down')
+    # for i in range(10):
+    # pyautogui.press('down')
 
     pyautogui.sleep(200)
 
@@ -184,32 +194,131 @@ def get_view_new():
             for link_element in link_elements:
                 link_url = link_element.get('href')
                 if link_url:
-                    link = "https://twitter.com"+link_url
+                    link = "https://twitter.com" + link_url
                     all_link.append(link)
                     print(link)
 
-                span_elements = link_element.find_all('span', class_='css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0')
+                span_elements = link_element.find_all('span',
+                                                      class_='css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0')
                 for span_element in span_elements:
                     span_html = str(span_element)
                     print(span_html)
-
 
     driver.quit()
 
     return all_link
 
 
+def get_memes_links_test():
+    # driver = webdriver.Chrome()
+    # driver.get("https://twitter.com/search?q=memes&src=typed_query")
 
-#get_view_new()
-#get_views()
-get_memes_links()
+    # pyautogui.sleep(5)
+
+    # html_source = driver.page_source
+
+    with open("ten_tep.html", "r", encoding="utf-8") as html_file:
+        html_content = html_file.read()
+    html_source = html_content
+    soup = BeautifulSoup(html_source, 'html.parser')
+    div_elements = soup.find_all('div', class_='css-1dbjc4n r-1iusvr4 r-16y2uox r-1777fci r-kzbkwu')
+
+    all_link = []
+    all_view = []
+    for div_element in div_elements:
+        inner_div_elements = div_element.find_all('div', class_='css-1dbjc4n r-13awgt0 r-18u37iz r-1h0z5md')
+        for inner_div_element in inner_div_elements:
+            link_elements = inner_div_element.find_all('a')
+            i = 0
+            for link_element in link_elements:
+                text_content = link_element.get_text()
+                href = link_element.get('href')
+                all_view.append(text_content)
+                all_link.append("https://twitter.com" + href)
+
+    return all_link, all_view
+
+def get_memes_links_view():
+
+    def get_link_view(html_source):
+        soup = BeautifulSoup(html_source, 'html.parser')
+        div_elements = soup.find_all('div', class_='css-1dbjc4n r-1iusvr4 r-16y2uox r-1777fci r-kzbkwu')
+        all_link = []
+        all_view = []
+        for div_element in div_elements:
+            inner_div_elements = div_element.find_all('div', class_='css-1dbjc4n r-13awgt0 r-18u37iz r-1h0z5md')
+            for inner_div_element in inner_div_elements:
+                link_elements = inner_div_element.find_all('a')
+                for link_element in link_elements:
+                    text_content = link_element.get_text()
+                    href = link_element.get('href')
+                    all_view.append(text_content)
+                    all_link.append("https://twitter.com" + href)
+
+        write_list_to_csv(all_link, all_view)
+    def get_for_loop():
+        for i in range(100):
+            pyautogui.press('down')
+        html_source = driver.page_source
+        get_link_view(html_source)
+
+
+    #driver = webdriver.Chrome()
+    #driver.get("https://twitter.com/search?q=memes&src=typed_query")
+
+
+    from selenium import webdriver
+    chromedriver_path = "D:\\chromedriver.exe"
+
+    # Khởi động ChromeDriver bằng subprocess
+    subprocess.Popen([chromedriver_path])
+
+
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--user-data-dir=C:\\Users\\Chung Duong\\AppData\\Local\\Google\\Chrome\\User Data")
+
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get("https://twitter.com/search?q=memes&src=typed_query")
 
 
 
-"""
-links = get_memes_links()
-file_name = "links.txt"
-with open(file_name, "w") as file:
-    for link in links:
-        file.write(link + "\n")
-"""
+    pyautogui.sleep(20)
+
+    for i in range(10):
+        get_for_loop()
+
+
+    """
+    html_source = driver.page_source
+    soup = BeautifulSoup(html_source, 'html.parser')
+    div_elements = soup.find_all('div', class_='css-1dbjc4n r-1iusvr4 r-16y2uox r-1777fci r-kzbkwu')
+    all_link = []
+    all_view = []
+    for div_element in div_elements:
+        inner_div_elements = div_element.find_all('div', class_='css-1dbjc4n r-13awgt0 r-18u37iz r-1h0z5md')
+        for inner_div_element in inner_div_elements:
+            link_elements = inner_div_element.find_all('a')
+            for link_element in link_elements:
+                text_content = link_element.get_text()
+                href = link_element.get('href')
+                all_view.append(text_content)
+                all_link.append("https://twitter.com" + href)
+    """
+
+
+
+
+    driver.quit()
+    #return all_link, all_view
+
+
+# get_view_new()
+# get_views()
+# get_memes_links()
+
+get_memes_links_view()
+
+
+
+
+
