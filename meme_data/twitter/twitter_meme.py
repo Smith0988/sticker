@@ -1,7 +1,10 @@
 import csv
+import json
 import os
 import subprocess
 import sys
+import time
+
 import pyautogui
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -238,8 +241,8 @@ def get_memes_links_test():
 
     return all_link, all_view
 
-def get_memes_links_view():
 
+def get_memes_links_view():
     def get_link_view(html_source):
         soup = BeautifulSoup(html_source, 'html.parser')
         div_elements = soup.find_all('div', class_='css-1dbjc4n r-1iusvr4 r-16y2uox r-1777fci r-kzbkwu')
@@ -256,69 +259,32 @@ def get_memes_links_view():
                     all_link.append("https://twitter.com" + href)
 
         write_list_to_csv(all_link, all_view)
+
     def get_for_loop():
         for i in range(100):
             pyautogui.press('down')
         html_source = driver.page_source
         get_link_view(html_source)
 
+    driver = webdriver.Chrome()
+    driver.get("https://twitter.com")
 
-    #driver = webdriver.Chrome()
-    #driver.get("https://twitter.com/search?q=memes&src=typed_query")
-
-
-    from selenium import webdriver
-    chromedriver_path = "D:\\chromedriver.exe"
-
-    # Khởi động ChromeDriver bằng subprocess
-    subprocess.Popen([chromedriver_path])
-
-
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument("--user-data-dir=C:\\Users\\Chung Duong\\AppData\\Local\\Google\\Chrome\\User Data")
-
-    driver = webdriver.Chrome(options=chrome_options)
+    with open("twitter_cookies.json", "r") as cookie_file:
+        saved_cookies = json.load(cookie_file)
+    for cookie in saved_cookies:
+        driver.add_cookie(cookie)
+    time.sleep(2)
     driver.get("https://twitter.com/search?q=memes&src=typed_query")
-
-
-
-    pyautogui.sleep(20)
-
-    for i in range(10):
+    time.sleep(5)
+    j = 0
+    for i in range(100000):
+        if j == 15:
+            driver.get("https://twitter.com/search?q=memes&src=typed_query")
+            time.sleep(5)
+            j = 0
         get_for_loop()
-
-
-    """
-    html_source = driver.page_source
-    soup = BeautifulSoup(html_source, 'html.parser')
-    div_elements = soup.find_all('div', class_='css-1dbjc4n r-1iusvr4 r-16y2uox r-1777fci r-kzbkwu')
-    all_link = []
-    all_view = []
-    for div_element in div_elements:
-        inner_div_elements = div_element.find_all('div', class_='css-1dbjc4n r-13awgt0 r-18u37iz r-1h0z5md')
-        for inner_div_element in inner_div_elements:
-            link_elements = inner_div_element.find_all('a')
-            for link_element in link_elements:
-                text_content = link_element.get_text()
-                href = link_element.get('href')
-                all_view.append(text_content)
-                all_link.append("https://twitter.com" + href)
-    """
-
-
-
-
+        j = j + 1
     driver.quit()
-    #return all_link, all_view
 
-
-# get_view_new()
-# get_views()
-# get_memes_links()
 
 get_memes_links_view()
-
-
-
-
-

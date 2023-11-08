@@ -271,6 +271,15 @@ def upload_image_to_postimage(sku_name, type):
 
     return copied_text
 
+def copy_Bumper_file():
+    source_path = "C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\image_base\\base_data\\BumperStickers.xlsm"
+    destination_path = "C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\temp_data\\BumperStickers.xlsm"
+    try:
+        shutil.copy(source_path, destination_path)
+        print(f"Đã sao chép {source_path} tới {destination_path}")
+    except Exception as e:
+        print(f"Lỗi: {e}")
+
 
 def move_temp_excel_form():
     # Đường dẫn đến tệp cần di chuyển
@@ -302,6 +311,7 @@ def upload_process():
         data_to_write = [sku, sku_temp_main, sku_temp_url_1, sku_temp_url_2]
         write_to_excel(data_to_write)
 
+    copy_Bumper_file()
     move_temp_excel_form()
     create_folder_and_copy_data()
     delete_folder_data()
