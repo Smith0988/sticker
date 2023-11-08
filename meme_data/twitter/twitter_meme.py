@@ -68,6 +68,8 @@ def get_memes_links():
 
     # Lấy mã nguồn HTML của trang
     html_source = driver.page_source
+    with open("ten_tep.html", "w", encoding="utf-8") as file:
+        file.write(html_source)
 
     # Sử dụng BeautifulSoup để phân tích HTML
     soup = BeautifulSoup(html_source, 'html.parser')
@@ -199,7 +201,8 @@ def get_view_new():
 
 
 #get_view_new()
-get_views()
+#get_views()
+get_memes_links()
 
 
 
