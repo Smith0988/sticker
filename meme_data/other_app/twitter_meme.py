@@ -1,15 +1,10 @@
 import csv
-from datetime import datetime
 import json
 import os
-import re
-import shutil
 import subprocess
 import sys
 import time
 
-import numpy as np
-import pandas as pd
 import pyautogui
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -121,6 +116,102 @@ def get_memes_links():
     return all_link
 
 
+def get_views():
+    driver = webdriver.Chrome()
+    driver.get("https://twitter.com/meme_ki_diwani/status/1721074953179595030")
+
+    pyautogui.sleep(60)
+    # Lấy mã nguồn HTML của trang
+    html_source = driver.page_source
+
+    # Sử dụng BeautifulSoup để phân tích HTML
+    soup = BeautifulSoup(html_source, 'html.parser')
+
+    # Tìm tất cả các phần tử <div> có class="css-1dbjc4n"
+    div_elements = soup.find_all('div', class_='css-1dbjc4n r-1wbh5a2 r-1b7u577')
+
+    # Lặp qua từng phần tử div có class='css-1dbjc4n'
+    all_link = []
+    for div_element in div_elements:
+        # Tìm tất cả các phần tử con div trong div_element
+        span_elements = div_element.find_all('span', class_='css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0')
+        for span_element in span_elements:
+            text = span_element.get_text()
+            print(text)
+
+    driver.quit()
+
+
+def get_view_new():
+    driver = webdriver.Chrome()
+    driver.get("https://twitter.com/search?q=memes&src=typed_query")
+
+    # wait = WebDriverWait(driver, 200)
+    # upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@name='text']")))
+    # upload_button.click()
+    # pyautogui.sleep(1)
+    # pyautogui.write("utester.9001@gmail.com")
+
+    # wait = WebDriverWait(driver, 200)
+    # upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
+    # upload_button.click()
+    # pyautogui.sleep(1)
+    # pyautogui.write("@Smith53017960")
+
+    # wait = WebDriverWait(driver, 200)
+    # upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Next')]")))
+    # upload_button.click()
+    # pyautogui.sleep(1)
+    # pyautogui.write("Chung.241089")
+
+    # wait = WebDriverWait(driver, 60)
+    # upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//div[@role='button']//div[@class='css-901oao r-1awozwy r-6koalj r-18u37iz r-16y2uox r-37j5jr r-a023e6 r-b88u0q r-1777fci r-rjixqe r-bcqeeo r-q4m81j r-qvutc0']")))
+    # upload_button.click()
+
+    # for i in range(10):
+    # pyautogui.press('down')
+
+    pyautogui.sleep(200)
+
+    # Lấy mã nguồn HTML của trang
+    html_source = driver.page_source
+
+    # Sử dụng BeautifulSoup để phân tích HTML
+    soup = BeautifulSoup(html_source, 'html.parser')
+
+    # Tìm tất cả các phần tử <div> có class="css-1dbjc4n"
+    div_elements = soup.find_all('div', class_='css-1dbjc4n')
+
+    # Lặp qua từng phần tử div có class='css-1dbjc4n'
+    all_link = []
+    for div_element in div_elements:
+        # Tìm tất cả các phần tử con div trong div_element
+        inner_div_elements = div_element.find_all('div', class_='css-1dbjc4n r-16y2uox r-1pi2tsx r-13qz1uu')
+
+        # Lặp qua từng phần tử div con để lấy các liên kết
+        for inner_div_element in inner_div_elements:
+            # Tìm tất cả các liên kết (thẻ <a>) bên trong phần tử div con
+            link_elements = inner_div_element.find_all('a')
+
+            # Lấy các liên kết và in ra màn hình
+            for link_element in link_elements:
+                link_url = link_element.get('href')
+                if link_url:
+                    link = "https://twitter.com" + link_url
+                    all_link.append(link)
+                    print(link)
+
+                span_elements = link_element.find_all('span',
+                                                      class_='css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0')
+                for span_element in span_elements:
+                    span_html = str(span_element)
+                    print(span_html)
+
+    driver.quit()
+
+    return all_link
+
+
 def get_memes_links_test():
     # driver = webdriver.Chrome()
     # driver.get("https://twitter.com/search?q=memes&src=typed_query")
@@ -150,38 +241,8 @@ def get_memes_links_test():
 
     return all_link, all_view
 
-def create_sku_code():
-    now = datetime.now()
-    day = now.day
-    formatted_day = f"{day:02}"
-    month = now.month
-    formatted_month = f"{month:02}"
-    year = now.year
-    hour = now.hour
-    formatted_hour = f"{hour:02}"
-    minute = now.minute
-    formatted_minute = f"{minute:02}"
-    second = now.second
-    formatted_second = f"{second:02}"
-
-    sku = "ST" + str(
-        year) + formatted_month + formatted_day + "_" + formatted_hour + formatted_minute + formatted_second
-    return sku
-
-def move_base_data():
-    sku = create_sku_code()
-    source_file = 'base_data.csv'
-    destination_folder = f"{sku}"
-
-    if os.path.exists(source_file):
-        if not os.path.exists(destination_folder):
-            os.makedirs(destination_folder)
-        destination_path = os.path.join(destination_folder, source_file)
-        shutil.move(source_file, destination_path)
 
 def get_memes_links_view():
-
-    move_base_data()
     def get_link_view(html_source):
         soup = BeautifulSoup(html_source, 'html.parser')
         div_elements = soup.find_all('div', class_='css-1dbjc4n r-1iusvr4 r-16y2uox r-1777fci r-kzbkwu')
@@ -226,92 +287,4 @@ def get_memes_links_view():
     driver.quit()
 
 
-def convert_views(view_str):
-    if pd.notna(view_str):
-        view_str = str(view_str)
-        matches = re.findall(r'(\d+)([KM])', view_str)
-        total_views = 0
-        for match in matches:
-            value, unit = match
-            if unit == 'K':
-                total_views += int(value) * 1000
-            elif unit == 'M':
-                total_views += int(value) * 1000000
-        return total_views
-    else:
-        return np.nan
-
-def sorted_by_view():
-    input_file = 'base_data.csv'
-    output_file = 'output_sorted_by_view.csv'
-
-    df = pd.read_csv(input_file, header=None)
-
-    # Chuyển đổi lượt xem sang số nguyên
-    df[1] = df[1].apply(convert_views)
-
-    # Loại bỏ các giá trị không hợp lệ
-    df = df.dropna(subset=[1])
-
-    # Sắp xếp theo số lượt xem giảm dần
-    df_sorted = df.sort_values(by=1, ascending=False)
-
-    # Ghi vào tệp CSV mới
-    df_sorted.to_csv(output_file, header=False, index=False)
-
-
-def sort_by_repeat():
-
-    input_file = 'output_sorted_by_view.csv'
-    output_file = 'output_sorted_by_repeat.csv'
-
-    # Đọc tệp CSV đã sắp xếp, sử dụng trị số cột 0 và 1
-    df = pd.read_csv(input_file, header=None)
-
-    # Tạo một Series chứa số lần xuất hiện của từng phần tử trong cột 0 (Link)
-    link_counts = df[0].value_counts()
-
-    # Thêm một cột mới là số lần duplicate (dup)
-    df['Dup'] = df[0].map(link_counts) - 1  # Trừ 1 để loại bỏ một lần xuất hiện ban đầu
-
-    # Sắp xếp theo thứ tự giảm dần của số lần duplicate
-    df_sorted = df.sort_values(by='Dup', ascending=False)
-
-    # Lấy danh sách các phần tử đã sắp xếp
-    sorted_links = df_sorted[0]
-
-    # Ghi danh sách đã sắp xếp và số lần duplicate vào tệp
-    df_sorted.to_csv(output_file, index=False)
-
-# Gọi hàm và truyền tên tệp input và output
-
-def remove_duplicate():
-
-    df = pd.read_csv('output_sorted_by_repeat.csv', header=None, names=['Link', 'Value1', 'Value2'])
-    df_deduplicated = df.drop_duplicates(subset=['Link', 'Value2'])
-    df_deduplicated.to_csv('output_deduplicated.csv', index=False)
-
-
-def get_top_list():
-
-    df_deduplicated = pd.read_csv('output_deduplicated.csv')
-    df_deduplicated = df_deduplicated.iloc[2:]
-    first_10_deduplicated = df_deduplicated.head(10)
-    df_sorted = pd.read_csv('output_sorted_by_view.csv')
-    first_10_sorted = df_sorted.head(10)
-    with open('top_list.csv', 'a') as outfile:
-        first_10_deduplicated.to_csv(outfile, index=False, header=False, mode='a')
-        first_10_sorted.to_csv(outfile, index=False, header=False, mode='a')
-
-    files_to_delete = ['output_deduplicated.csv', 'output_sorted_by_repeat.csv', 'output_sorted_by_view.csv']
-    for file_name in files_to_delete:
-        if os.path.exists(file_name):
-            os.remove(file_name)
-
-
-
 get_memes_links_view()
-sorted_by_view()
-sort_by_repeat()
-remove_duplicate()
-get_top_list()
