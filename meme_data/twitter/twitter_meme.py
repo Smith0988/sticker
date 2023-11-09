@@ -214,7 +214,7 @@ def get_memes_links_view():
         driver.add_cookie(cookie)
     time.sleep(2)
     driver.get("https://twitter.com/search?q=memes&src=typed_query")
-    time.sleep(5)
+    time.sleep(80)
     j = 0
     for i in range(100000):
         if j == 15:
@@ -310,7 +310,7 @@ def get_top_list():
 
 
 
-get_memes_links_view()
+#get_memes_links_view()
 sorted_by_view()
 sort_by_repeat()
 remove_duplicate()

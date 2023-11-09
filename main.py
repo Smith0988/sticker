@@ -111,7 +111,7 @@ def create_csv_to_photo():
             write_sentence_to_file(used_data, text)
             write_sentence_to_file(temp_used_data, text)
             list_split, product_name = split_sentence_by_length(text)
-            sku = export_file_to_csv(list_split)
+            sku = export_file_to_csv(list_split, text)
             time.sleep(1)
             sku_list.append(sku)
             product_name_list.append(product_name)

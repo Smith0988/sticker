@@ -60,10 +60,10 @@ def create_sku_code():
     return sku
 
 
-def export_file_to_csv(list_text):
+def export_file_to_csv(list_text, text):
     result_list = []
     sku = create_sku_code()
-    result_list.append(sku)
+    result_list.append(sku + "_" + text)
 
     for list in list_text:
         result_list.append(list)
