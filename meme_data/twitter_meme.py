@@ -3,8 +3,6 @@ from datetime import datetime
 import json
 import os
 import re
-import shutil
-import subprocess
 import sys
 import time
 
@@ -175,7 +173,7 @@ def move_base_data():
     total_file_path = 'total_data_twitter.csv'
     df.to_csv(total_file_path, mode='a', header=False, index=False)
 
-def get_memes_links_view():
+def get_memes_links_view(driver):
 
     def get_link_view(html_source):
         soup = BeautifulSoup(html_source, 'html.parser')
@@ -196,12 +194,12 @@ def get_memes_links_view():
         write_list_to_csv(all_link, all_view)
 
     def get_for_loop():
-        for i in range(100):
+        for i in range(10):
             pyautogui.press('down')
         html_source = driver.page_source
         get_link_view(html_source)
-
-    driver = webdriver.Chrome()
+    """
+    #driver = webdriver.Chrome()
     driver.get("https://twitter.com")
 
     cookie_files = ["twitter_cookies.json", "twitter_cookies_1699676266.json"]  # Thêm các tệp đã lưu vào đây
@@ -212,19 +210,18 @@ def get_memes_links_view():
             saved_cookies = json.load(cookie_file)
             for cookie in saved_cookies:
                 driver.add_cookie(cookie)
-
-    time.sleep(2)
-    driver.get("https://twitter.com/search?q=memes&src=typed_query")
-    time.sleep(80)
+    """
+    #driver.get("https://twitter.com")
+    #time.sleep(80)
     j = 0
-    for i in range(100000):
-        if j == 15:
-            driver.get("https://twitter.com/search?q=memes&src=typed_query")
-            time.sleep(5)
+    for i in range(1000):
+        if j == 3:
+            driver.get("https://twitter.com")
+            time.sleep(3)
             j = 0
         get_for_loop()
         j = j + 1
-    driver.quit()
+    #driver.quit()
 
 
 def convert_views(view_str):
@@ -312,8 +309,8 @@ def get_top_list():
 
 
 #get_memes_links_view()
-time.sleep(1)
-move_base_data()
+#time.sleep(1)
+#move_base_data()
 #time.sleep(1)
 #sorted_by_view()
 #time.sleep(1)

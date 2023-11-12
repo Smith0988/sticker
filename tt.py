@@ -1,8 +1,2 @@
-import pyautogui
-
-
-pyautogui.sleep(3)  # Chờ 2 giây
-# Lấy tọa độ hiện tại của con trỏ chuột
-x, y = pyautogui.position()
-
-print(f"Tọa độ hiện tại: ({x}, {y})")
+text  = "The marvelous richness of human experience would lose something of rewarding joy if there were no limitations to overcome. The hilltop hour would not be half so wonderful if there were no dark valleys to traverse."
+print(len(text))

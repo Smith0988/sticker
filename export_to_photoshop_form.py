@@ -18,7 +18,7 @@ def resource_path(relative_path):
 name_size_2 = resource_path("temp_data\\NameSize_2.csv")
 name_size_3 = resource_path("temp_data\\NameSize_3.csv")
 name_size_4 = resource_path("temp_data\\NameSize_4.csv")
-
+name_size_5 = resource_path("temp_data\\NameSize_5.csv")
 
 def create_name_size_2():
     list_2 = ['SKU', 'Name1', 'Name2']
@@ -41,6 +41,15 @@ def create_name_size_4():
         writer.writerow(list_4)
 
 
+def create_name_size_5():
+    list_5 = ['SKU', 'Name1', 'Name2', 'Name3', 'Name4', 'Name5']
+    with open(name_size_5, mode='a', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(list_5)
+
+
+
+
 def create_sku_code():
     now = datetime.now()
     day = now.day
@@ -60,10 +69,13 @@ def create_sku_code():
     return sku
 
 
-def export_file_to_csv(list_text, text):
+def export_file_to_csv(list_text):
     result_list = []
     sku = create_sku_code()
-    result_list.append(sku + "_" + text)
+    text = list_text[0] + " " + list_text[1]
+    text_1 = text.translate(str.maketrans("", "", "?,\'\"!."))
+
+    result_list.append(sku + "_" + text_1)
 
     for list in list_text:
         result_list.append(list)
@@ -84,13 +96,22 @@ def export_file_to_csv(list_text, text):
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
-    else:
+    elif len(list_text) == 4:
         if not os.path.exists(name_size_4):
             create_name_size_4()
 
         with open(name_size_4, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
+
+    elif len(list_text) == 5:
+        if not os.path.exists(name_size_5):
+            create_name_size_5()
+
+        with open(name_size_5, mode='a', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            writer.writerow(result_list)
+
     return sku
 
 

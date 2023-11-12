@@ -303,12 +303,14 @@ def move_temp_excel_form():
 
 def upload_process():
     sku_list = read_csv_file()
+
     for sku in sku_list:
         sku_temp_main = upload_image_to_postimage(sku, "main")
         sku_temp_url_1 = upload_image_to_postimage(sku, "url_1")
         sku_temp_url_2 = upload_image_to_postimage(sku, "url_2")
-
-        data_to_write = [sku, sku_temp_main, sku_temp_url_1, sku_temp_url_2]
+        prefix = sku.split('_')[:2]
+        result = '_'.join(prefix)
+        data_to_write = [result, sku_temp_main, sku_temp_url_1, sku_temp_url_2]
         write_to_excel(data_to_write)
 
     copy_Bumper_file()
