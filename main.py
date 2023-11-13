@@ -107,13 +107,11 @@ def create_csv_to_photo():
             i = i + 1
             if i == 300:
                 break
-            if len(text) > 130:
-                continue
             write_sentence_to_file(used_data, text)
             write_sentence_to_file(temp_used_data, text)
-            list_split, product_name = split_sentence_2_3_and_3_3(text)
+            #list_split, product_name = split_sentence_2_3_and_3_3(text)
 
-            #list_split, product_name = split_sentence_4_2_5_2(text)
+            list_split, product_name = split_sentence_4_2_5_2(text)
             sku = export_file_to_csv(list_split)
             time.sleep(1)
             sku_list.append(sku)
@@ -130,7 +128,7 @@ def create_csv_to_photo():
         move_csv_temp_file("NameSize_4.csv")
 
     if os.path.exists(name_size_5):
-        move_csv_temp_file("NameSize_5.csv")
+        move_csv_temp_file("NameSize_4_remove.csv")
 
 
     if os.path.exists(temp_used_data):

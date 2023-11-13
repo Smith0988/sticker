@@ -88,7 +88,7 @@ def get_memes_links_view_instagram(driver):
         write_list_to_csv(all_link, all_view)
 
     def get_for_loop():
-        for i in range(10):
+        for i in range(100):
             pyautogui.press('down')
         html_source = driver.page_source
         get_link_view(html_source)

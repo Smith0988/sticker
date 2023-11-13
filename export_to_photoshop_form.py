@@ -18,7 +18,7 @@ def resource_path(relative_path):
 name_size_2 = resource_path("temp_data\\NameSize_2.csv")
 name_size_3 = resource_path("temp_data\\NameSize_3.csv")
 name_size_4 = resource_path("temp_data\\NameSize_4.csv")
-name_size_5 = resource_path("temp_data\\NameSize_5.csv")
+name_size_5 = resource_path("temp_data\\NameSize_4_remove.csv")
 
 def create_name_size_2():
     list_2 = ['SKU', 'Name1', 'Name2']
@@ -41,8 +41,8 @@ def create_name_size_4():
         writer.writerow(list_4)
 
 
-def create_name_size_5():
-    list_5 = ['SKU', 'Name1', 'Name2', 'Name3', 'Name4', 'Name5']
+def create_name_size_4_remove():
+    list_5 = ['SKU', 'Name1', 'Name2', 'Name3', 'Name4']
     with open(name_size_5, mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(list_5)
@@ -106,8 +106,8 @@ def export_file_to_csv(list_text):
 
     elif len(list_text) == 5:
         if not os.path.exists(name_size_5):
-            create_name_size_5()
-
+            create_name_size_4_remove()
+        result_list = result_list[:-1]
         with open(name_size_5, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
