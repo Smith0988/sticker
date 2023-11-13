@@ -5,36 +5,45 @@ def split_sentence_2_3_and_3_3(text):
     sentence = re.sub(r'\s+', ' ', text).strip()
     if len(sentence) <= 38:
         words = sentence.split()
-        num_words = len(words)
-        one_half = num_words // 2
-        first_half = ' '.join(words[:one_half])
-        second_half = ' '.join(words[one_half:])
-        if len(second_half) > len(first_half) + 10:
-            word_1 = first_half.split()
-            word_2 = second_half.split()
-            word_1.append(word_2[0])
-            word_2 = word_2[1:]
-            first_half = ' '.join(word_1)
-            second_half = ' '.join(word_2)
-        split = [first_half, second_half]
+        num_words = len(sentence)
+        target = num_words // 2
+        result_1 = ''
+        result_2 = ''
+        temp_len = 0
+        for word in words:
+            temp_len = temp_len + len(word) + 1
+            if temp_len <= target + 3:
+                result_1 = result_1 + word + ' '
+            else:
+                result_2 = result_2 + word + ' '
+
+        split = [result_1, result_2]
         product_name = "2Pcs - 5IN " + sentence + " Bumper Sticker" + " - " + sentence + " Sticker"
 
     else:
         words = sentence.split()
-        num_words = len(words)
-        one_third = num_words // 3
-        two_thirds = 2 * one_third
-        first_third = ' '.join(words[:one_third])
-        second_third = ' '.join(words[one_third:two_thirds])
-        last_third = ' '.join(words[two_thirds:])
-        split = [first_third, second_third, last_third]
-        product_name = "2Pcs - 5IN " + sentence + " Bumper Sticker" + " - " + sentence + " Sticker"
+        num_words = len(sentence)
+        target_1 = num_words // 3
+        target_2 = target_1 * 2
+        temp_len = 0
+        result_1 = ''
+        result_2 = ''
+        result_3 = ''
+        for word in words:
+            temp_len = temp_len + len(word) + 1
+            if temp_len <= target_1:
+                result_1 = result_1 + word  + ' '
+            elif target_1 < temp_len <= target_2 + 3:
+                result_2 = result_2 + word  + ' '
+            else:
+                result_3 = result_3 + word + ' '
 
+        split = [result_1, result_2, result_3]
+        product_name = "2Pcs - 5IN " + sentence + " Bumper Sticker" + " - " + sentence + " Sticker"
 
     split = [item.upper() for item in split]
 
     return split, product_name
-
 
 def check_len_by_130(text, gioi_han=130):
 
@@ -60,31 +69,56 @@ def split_sentence_4_2_5_2(text):
 
     if len(sentence) <= 50:
         words = sentence.split()
-        num_words = len(words)
-        one_fourth = num_words // 4
-        two_fourths = 2 * one_fourth
-        three_fourths = 3 * one_fourth
-        first_part = ' '.join(words[:one_fourth])
-        second_part = ' '.join(words[one_fourth:two_fourths])
-        third_part = ' '.join(words[two_fourths:three_fourths])
-        last_part = ' '.join(words[three_fourths:])
-        split = [first_part, second_part, third_part, last_part]
-        product_name = "2Pcs - 5IN " + first_part + " " + second_part + " Bumper Sticker" + " - " + first_part + " " + second_part + " Sticker"
+        num_words = len(sentence)
+        target_1 = num_words // 4
+        target_2 = target_1*2
+        target_3 = target_1*3
+        result_1 = ''
+        result_2 = ''
+        result_3 = ''
+        result_4 = ''
+        temp_len = 0
+        for word in words:
+            temp_len = temp_len + len(word) + 1
+            if temp_len <= target_1 + 1:
+                result_1 = result_1 + word + ' '
+            elif target_1 < temp_len <= target_2 + 1:
+                result_2 = result_2 + word + ' '
+            elif target_2 < temp_len <= target_3 + 3:
+                result_3 = result_3 + word + ' '
+            else:
+                 result_4 = result_4 + word + ' '
+
+        split = [result_1, result_2, result_3, result_4]
+        product_name = "2Pcs - 5IN " + result_1 + " " + result_2 + " Bumper Sticker" + " - " + result_1 + " " + result_2 + " Sticker"
 
     else:
         if len(sentence) > 130:
             sentence = check_len_by_130(sentence)
         words = sentence.split()
-        num_words = len(words)
-        one_fourth = num_words // 4
-        two_fourths = 2 * one_fourth
-        three_fourths = 3 * one_fourth
-        first_part = ' '.join(words[:one_fourth])
-        second_part = ' '.join(words[one_fourth:two_fourths])
-        third_part = ' '.join(words[two_fourths:three_fourths])
-        last_part = ' '.join(words[three_fourths:])
-        split = [first_part, second_part, third_part, last_part, "remove"]
-        product_name = "2Pcs - 5IN " + first_part + " " + second_part + " Bumper Sticker" + " - " + first_part + " " + second_part + " Sticker"
+        num_words = len(sentence)
+        target_1 = num_words // 4
+        target_2 = target_1*2
+        target_3 = target_1*3
+        result_1 = ''
+        result_2 = ''
+        result_3 = ''
+        result_4 = ''
+        temp_len = 0
+        for word in words:
+            temp_len = temp_len + len(word) + 1
+            if temp_len <= target_1 + 1:
+                result_1 = result_1 + word + ' '
+            elif target_1 < temp_len <= target_2 + 1:
+                result_2 = result_2 + word + ' '
+            elif target_2 < temp_len <= target_3 + 3:
+                result_3 = result_3 + word + ' '
+            else:
+                 result_4 = result_4 + word + ' '
+
+        split = [result_1, result_2, result_3, result_4, "remove"]
+        product_name = "2Pcs - 5IN " + result_1 + " " + result_2 + " Bumper Sticker" + " - " + result_1 + " " + result_2 + " Sticker"
+
 
     split = [item.upper() for item in split]
 
@@ -94,9 +128,8 @@ def split_sentence_4_2_5_2(text):
 
 
 
-
 if __name__ == "__main__":
-    english_sentence = "A new sentence begins with a capital letter A new  sdb e swber swdbesd dern"
+    english_sentence = "it does not exist in nature, nor do the children of men as a whole experience it."
     #result, product_name = split_sentence_2_3_and_3_3(english_sentence)
     result, product_name = split_sentence_4_2_5_2(english_sentence)
     print(result)
