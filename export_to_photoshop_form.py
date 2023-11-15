@@ -16,15 +16,40 @@ def resource_path(relative_path):
 
 
 name_size_2 = resource_path("temp_data\\NameSize_2.csv")
+name_size_2_change = resource_path("temp_data\\NameSize_2_change.csv")
 name_size_3 = resource_path("temp_data\\NameSize_3.csv")
 name_size_4 = resource_path("temp_data\\NameSize_4.csv")
-name_size_5 = resource_path("temp_data\\NameSize_4_remove.csv")
+name_size_4_change = resource_path("temp_data\\NameSize_4_change.csv")
+
+temp_used_data = resource_path("use_data\\temp_sentence_used.txt")
+temp_used_data_2 = resource_path("use_data\\temp_sentence_used_2.txt")
+temp_used_data_2_change = resource_path("use_data\\temp_sentence_used_2_change.txt")
+temp_used_data_3 = resource_path("use_data\\temp_sentence_used_3.txt")
+temp_used_data_4 = resource_path("use_data\\temp_sentence_used_4.txt")
+temp_used_data_4_change = resource_path("use_data\\temp_sentence_used_4_change.txt")
+
+
+
+def write_sentence_to_file(filename, sentence):
+    try:
+        with open(filename, 'a') as file:
+            file.write(sentence + '\n')
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+
 
 def create_name_size_2():
     list_2 = ['SKU', 'Name1', 'Name2']
     with open(name_size_2, mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(list_2)
+
+
+def create_name_size_2_change():
+    list_2_change = ['SKU', 'Name1', 'Name2']
+    with open(name_size_2_change, mode='a', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(list_2_change)
 
 
 def create_name_size_3():
@@ -41,13 +66,11 @@ def create_name_size_4():
         writer.writerow(list_4)
 
 
-def create_name_size_4_remove():
-    list_5 = ['SKU', 'Name1', 'Name2', 'Name3', 'Name4']
-    with open(name_size_5, mode='a', newline='', encoding='utf-8') as file:
+def create_name_size_4_change():
+    list_4_change = ['SKU', 'Name1', 'Name2', 'Name3', 'Name4']
+    with open(name_size_4_change, mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(list_5)
-
-
+        writer.writerow(list_4_change)
 
 
 def create_sku_code():
@@ -69,7 +92,8 @@ def create_sku_code():
     return sku
 
 
-def export_file_to_csv(list_text):
+def export_file_to_csv(list_text, used_text):
+    check = False
     result_list = []
     sku = create_sku_code()
     text = list_text[0] + " " + list_text[1]
@@ -80,7 +104,19 @@ def export_file_to_csv(list_text):
     for list in list_text:
         result_list.append(list)
 
-    if len(list_text) == 2:
+    if len(list_text) == 2 and (len(list_text[0]) > 16 or len(list_text[1]) > 16):
+        write_sentence_to_file(temp_used_data_2_change, used_text)
+
+        check = True
+        if not os.path.exists(name_size_2_change):
+            create_name_size_2_change()
+
+        with open(name_size_2_change, mode='a', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            writer.writerow(result_list)
+
+    elif len(list_text) == 2 and check == False:
+        write_sentence_to_file(temp_used_data_2, used_text)
         if not os.path.exists(name_size_2):
             create_name_size_2()
 
@@ -88,7 +124,9 @@ def export_file_to_csv(list_text):
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
+
     elif len(list_text) == 3:
+        write_sentence_to_file(temp_used_data_3, used_text)
         if not os.path.exists(name_size_3):
             create_name_size_3()
 
@@ -96,19 +134,22 @@ def export_file_to_csv(list_text):
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
-    elif len(list_text) == 4:
+    elif len(list_text) == 4 and (len(list_text[0]) > 16 or len(list_text[1]) > 16 or len(list_text[2]) > 16 or len(
+            list_text[3]) > 16):
+        write_sentence_to_file(temp_used_data_4_change, used_text)
+        if not os.path.exists(name_size_4_change):
+            create_name_size_4_change()
+
+        with open(name_size_4_change, mode='a', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            writer.writerow(result_list)
+
+    elif len(list_text) == 4 and check == False:
+        write_sentence_to_file(temp_used_data_4, used_text)
         if not os.path.exists(name_size_4):
             create_name_size_4()
 
         with open(name_size_4, mode='a', newline='', encoding='utf-8') as file:
-            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            writer.writerow(result_list)
-
-    elif len(list_text) == 5:
-        if not os.path.exists(name_size_5):
-            create_name_size_4_remove()
-        result_list = result_list[:-1]
-        with open(name_size_5, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 

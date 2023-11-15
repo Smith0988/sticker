@@ -7,6 +7,12 @@ from upload_image_to_github import *
 base_data = resource_path("base_data\\sentence_data.txt")
 used_data = resource_path("use_data\\sentence_used.txt")
 temp_used_data = resource_path("use_data\\temp_sentence_used.txt")
+temp_used_data_2 = resource_path("use_data\\temp_sentence_used_2.txt")
+temp_used_data_2_change = resource_path("use_data\\temp_sentence_used_2_change.txt")
+temp_used_data_3 = resource_path("use_data\\temp_sentence_used_3.txt")
+temp_used_data_4 = resource_path("use_data\\temp_sentence_used_4.txt")
+temp_used_data_4_change = resource_path("use_data\\temp_sentence_used_4_change.txt")
+
 
 import shutil
 import os
@@ -55,7 +61,7 @@ def find_unmatched_sentences(data_filename, used_filename):
     return unmatched_sentences
 
 
-def move_txt_temp_file():
+def move_txt_temp_file(file_name):
     # Đường dẫn đến tệp cần di chuyển
     source_file = temp_used_data
 
@@ -69,7 +75,7 @@ def move_txt_temp_file():
             os.makedirs(destination_directory)
 
         # Đường dẫn đầy đủ đến tệp trong thư mục đích
-        destination_file = os.path.join(destination_directory, "temp_sentence_used.txt")
+        destination_file = os.path.join(destination_directory, f"{file_name}")
 
         # Di chuyển tệp từ nguồn sang đích
         shutil.move(source_file, destination_file)
@@ -100,7 +106,7 @@ def create_csv_to_photo():
     product_name_list = []
     list_text = find_unmatched_sentences(base_data, used_data)
     if list_text:
-        write_sentence_to_file_temp(temp_used_data, "")
+        #write_sentence_to_file_temp(temp_used_data, "")
 
         i = 1
         for text in list_text:
@@ -108,11 +114,11 @@ def create_csv_to_photo():
             if i == 300:
                 break
             write_sentence_to_file(used_data, text)
-            write_sentence_to_file(temp_used_data, text)
-            #list_split, product_name = split_sentence_2_3_and_3_3(text)
+            #write_sentence_to_file(temp_used_data, text)
+            list_split, product_name = split_sentence_2_3_and_3_3(text)
 
-            list_split, product_name = split_sentence_4_2_5_2(text)
-            sku = export_file_to_csv(list_split)
+            #list_split, product_name = split_sentence_4_2_5_2(text)
+            sku = export_file_to_csv(list_split, text)
             time.sleep(1)
             sku_list.append(sku)
             product_name_list.append(product_name)
@@ -120,6 +126,9 @@ def create_csv_to_photo():
 
     if os.path.exists(name_size_2):
         move_csv_temp_file("NameSize_2.csv")
+    if os.path.exists(name_size_2_change):
+        move_csv_temp_file("NameSize_2_change.csv")
+
 
     if os.path.exists(name_size_3):
         move_csv_temp_file("NameSize_3.csv")
@@ -127,12 +136,29 @@ def create_csv_to_photo():
     if os.path.exists(name_size_4):
         move_csv_temp_file("NameSize_4.csv")
 
-    if os.path.exists(name_size_5):
-        move_csv_temp_file("NameSize_4_remove.csv")
+    if os.path.exists(name_size_4_change):
+        move_csv_temp_file("NameSize_4_change.csv")
 
 
     if os.path.exists(temp_used_data):
-        move_txt_temp_file()
+        move_txt_temp_file("temp_sentence_used.txt")
+
+
+    if os.path.exists(temp_used_data_2):
+        move_txt_temp_file("temp_sentence_used_2.txt")
+
+    if os.path.exists(temp_used_data_2_change):
+        move_txt_temp_file("temp_sentence_used_2_change.txt")
+
+
+    if os.path.exists(temp_used_data_3):
+        move_txt_temp_file("temp_sentence_used_3.txt")
+
+    if os.path.exists(temp_used_data_4):
+        move_txt_temp_file("temp_sentence_used_4.txt")
+
+    if os.path.exists(temp_used_data_4_change):
+        move_txt_temp_file("temp_sentence_used_4_change.txt")
 
 
     return sku_list, product_name_list
