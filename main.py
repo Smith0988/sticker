@@ -61,9 +61,9 @@ def find_unmatched_sentences(data_filename, used_filename):
     return unmatched_sentences
 
 
-def move_txt_temp_file(file_name):
+def move_txt_temp_file(source_file, file_name):
     # Đường dẫn đến tệp cần di chuyển
-    source_file = temp_used_data
+    source_file = source_file
 
     # Đường dẫn đến thư mục đích
     destination_directory = r"C:\Users\Cong Dinh\Desktop\Sticker Image\temp_data"
@@ -145,20 +145,20 @@ def create_csv_to_photo():
 
 
     if os.path.exists(temp_used_data_2):
-        move_txt_temp_file("temp_sentence_used_2.txt")
+        move_txt_temp_file(temp_used_data_2, "temp_sentence_used_2.txt")
 
     if os.path.exists(temp_used_data_2_change):
-        move_txt_temp_file("temp_sentence_used_2_change.txt")
+        move_txt_temp_file(temp_used_data_2_change, "temp_sentence_used_2_change.txt")
 
 
     if os.path.exists(temp_used_data_3):
-        move_txt_temp_file("temp_sentence_used_3.txt")
+        move_txt_temp_file(temp_used_data_3, "temp_sentence_used_3.txt")
 
     if os.path.exists(temp_used_data_4):
-        move_txt_temp_file("temp_sentence_used_4.txt")
+        move_txt_temp_file(temp_used_data_4,"temp_sentence_used_4.txt")
 
     if os.path.exists(temp_used_data_4_change):
-        move_txt_temp_file("temp_sentence_used_4_change.txt")
+        move_txt_temp_file(temp_used_data_4_change,"temp_sentence_used_4_change.txt")
 
 
     return sku_list, product_name_list

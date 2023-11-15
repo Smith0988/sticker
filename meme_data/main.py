@@ -53,14 +53,4 @@ def main_get_all_link():
 
     driver.quit()
 
-#main_get_all_link()
-move_base_data_instagram()
-time.sleep(1)
-sorted_by_view_instagram()
-time.sleep(1)
-sort_by_repeat_instagram()
-time.sleep(1)
-remove_duplicate_instagram()
-time.sleep(1)
-get_top_list_instagram()
-time.sleep(1)
+main_get_all_link()

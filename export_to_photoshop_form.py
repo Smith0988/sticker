@@ -104,10 +104,9 @@ def export_file_to_csv(list_text, used_text):
     for list in list_text:
         result_list.append(list)
 
-    if len(list_text) == 2 and (len(list_text[0]) > 16 or len(list_text[1]) > 16):
+    if len(list_text) == 2 and (len(list_text[0]) > 10 or len(list_text[1]) > 10):
         write_sentence_to_file(temp_used_data_2_change, used_text)
 
-        check = True
         if not os.path.exists(name_size_2_change):
             create_name_size_2_change()
 
@@ -115,7 +114,7 @@ def export_file_to_csv(list_text, used_text):
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
-    elif len(list_text) == 2 and check == False:
+    elif len(list_text) == 2 and (len(list_text[0]) <= 10 and len(list_text[1]) <= 10):
         write_sentence_to_file(temp_used_data_2, used_text)
         if not os.path.exists(name_size_2):
             create_name_size_2()
@@ -144,7 +143,8 @@ def export_file_to_csv(list_text, used_text):
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
-    elif len(list_text) == 4 and check == False:
+    elif len(list_text) == 4 and (len(list_text[0]) <= 16 and len(list_text[1]) <= 16 and len(list_text[2]) <= 16 and len(
+            list_text[3]) <= 16):
         write_sentence_to_file(temp_used_data_4, used_text)
         if not os.path.exists(name_size_4):
             create_name_size_4()
