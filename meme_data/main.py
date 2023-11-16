@@ -53,4 +53,15 @@ def main_get_all_link():
 
     driver.quit()
 
-main_get_all_link()
+#main_get_all_link()
+time.sleep(1)
+move_base_data()
+time.sleep(1)
+sorted_by_view()
+time.sleep(1)
+sort_by_repeat()
+time.sleep(1)
+remove_duplicate()
+time.sleep(1)
+get_top_list()
+time.sleep(1)
