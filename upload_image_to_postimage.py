@@ -202,8 +202,8 @@ def delete_folder_data():
             print(f"Thư mục {folder} không tồn tại, không thể xóa dữ liệu.")
 
 
-def read_csv_file():
-    csv_file = r"C:\Users\Cong Dinh\Desktop\Sticker Image\temp_data\NameSize_2.csv"
+def read_csv_file(file_name):
+    csv_file = f"C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\temp_data\\{file_name}"
     list_1 = []
     with open(csv_file, newline='', encoding='utf-8') as file:
         csv_reader = csv.reader(file)
@@ -214,8 +214,8 @@ def read_csv_file():
     return list_1
 
 
-def read_csv_file_folder():
-    csv_file = r"C:\Users\Cong Dinh\Desktop\Sticker Image\temp_data\NameSize_2.csv"
+def read_csv_file_folder(file_name):
+    csv_file = f"C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\temp_data\\{file_name}"
     list_1 = []
     with open(csv_file, newline='', encoding='utf-8') as file:
         csv_reader = csv.reader(file)
@@ -302,7 +302,14 @@ def move_temp_excel_form():
 
 
 def upload_process():
-    sku_list = read_csv_file()
+
+    name_size_2 = "NameSize_2.csv"
+    name_size_2_change = "NameSize_2_change.csv"
+
+
+
+
+    sku_list = read_csv_file(name_size_2_change)
 
     for sku in sku_list:
         sku_temp_main = upload_image_to_postimage(sku, "main")
