@@ -39,7 +39,7 @@ def split_sentence_4_2_5_2(text):
             if temp_len <= target_1:
                 result_1 = result_1 + word + ' '
             elif target_1 < temp_len <= target_2:
-                result_2 = result_2 + word + ' '
+                result_2 = result_2 + word + ''
             elif target_2 < temp_len <= target_3:
                 result_3 = result_3 + word + ' '
             else:
