@@ -1,5 +1,6 @@
 import csv
 import os
+import re
 import sys
 from datetime import datetime
 
@@ -98,8 +99,10 @@ def export_file_to_csv(list_text, used_text):
     sku = create_sku_code()
     text = list_text[0] + " " + list_text[1]
     text_1 = text.translate(str.maketrans("", "", "?,\'\"!."))
+    text_1 = text_1.strip()
+    text_2 = re.sub(r'\s+', ' ', text_1)
 
-    result_list.append(sku + "_" + text_1)
+    result_list.append(sku + "_" + text_2)
 
     for list in list_text:
         result_list.append(list)
@@ -133,8 +136,8 @@ def export_file_to_csv(list_text, used_text):
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
-    elif len(list_text) == 4 and (len(list_text[0]) > 16 or len(list_text[1]) > 16 or len(list_text[2]) > 16 or len(
-            list_text[3]) > 16):
+    elif len(list_text) == 4 and (len(list_text[0]) > 18 or len(list_text[1]) > 18 or len(list_text[2]) > 18 or len(
+            list_text[3]) > 18):
         write_sentence_to_file(temp_used_data_4_change, used_text)
         if not os.path.exists(name_size_4_change):
             create_name_size_4_change()
@@ -143,8 +146,8 @@ def export_file_to_csv(list_text, used_text):
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
-    elif len(list_text) == 4 and (len(list_text[0]) <= 16 and len(list_text[1]) <= 16 and len(list_text[2]) <= 16 and len(
-            list_text[3]) <= 16):
+    elif len(list_text) == 4 and (len(list_text[0]) <= 18 and len(list_text[1]) <= 18 and len(list_text[2]) <= 18 and len(
+            list_text[3]) <= 18):
         write_sentence_to_file(temp_used_data_4, used_text)
         if not os.path.exists(name_size_4):
             create_name_size_4()

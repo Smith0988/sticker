@@ -281,6 +281,16 @@ def copy_Bumper_file():
         print(f"Lỗi: {e}")
 
 
+    source_path = "C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\image_base\\base_data\\BumperStickersAAx2.xlsm"
+    destination_path = "C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\temp_data\\BumperStickersAAx2.xlsm"
+    try:
+        shutil.copy(source_path, destination_path)
+        print(f"Đã sao chép {source_path} tới {destination_path}")
+    except Exception as e:
+        print(f"Lỗi: {e}")
+
+
+
 def move_temp_excel_form():
     # Đường dẫn đến tệp cần di chuyển
     source_file = r"C:\Users\Cong Dinh\Documents\GitHub\sticker\temp_form.xlsx"
@@ -305,11 +315,12 @@ def upload_process():
 
     name_size_2 = "NameSize_2.csv"
     name_size_2_change = "NameSize_2_change.csv"
+    name_size_4 = "NameSize_4.csv"
+    name_size_4_change = "NameSize_4_change.csv"
 
 
 
-
-    sku_list = read_csv_file(name_size_2_change)
+    sku_list = read_csv_file(name_size_4_change)
 
     for sku in sku_list:
         sku_temp_main = upload_image_to_postimage(sku, "main")
@@ -330,3 +341,4 @@ def upload_process():
 
 if __name__ == "__main__":
     upload_process()
+    #create_folder_and_copy_data()
