@@ -320,7 +320,7 @@ def upload_process():
 
 
 
-    sku_list = read_csv_file(name_size_4_change)
+    sku_list = read_csv_file(name_size_2_change)
 
     for sku in sku_list:
         sku_temp_main = upload_image_to_postimage(sku, "main")

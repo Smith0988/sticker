@@ -98,7 +98,7 @@ def export_file_to_csv(list_text, used_text):
     result_list = []
     sku = create_sku_code()
     text = list_text[0] + " " + list_text[1]
-    text_1 = text.translate(str.maketrans("", "", "?,\'\"!."))
+    text_1 = text.translate(str.maketrans("", "", "?,\'\"!;:."))
     text_1 = text_1.strip()
     text_2 = re.sub(r'\s+', ' ', text_1)
 
