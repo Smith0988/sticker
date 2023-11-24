@@ -107,17 +107,17 @@ def export_file_to_csv(list_text, used_text):
     for list in list_text:
         result_list.append(list)
 
-    if len(list_text) == 2 and (len(list_text[0]) > 10 or len(list_text[1]) > 10):
-        write_sentence_to_file(temp_used_data_2_change, used_text)
+    #if len(list_text) == 2 and (len(list_text[0]) > 100 or len(list_text[1]) > 100):
+        #write_sentence_to_file(temp_used_data_2_change, used_text)
 
-        if not os.path.exists(name_size_2_change):
-            create_name_size_2_change()
+        #if not os.path.exists(name_size_2_change):
+            #create_name_size_2_change()
 
-        with open(name_size_2_change, mode='a', newline='', encoding='utf-8') as file:
-            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            writer.writerow(result_list)
+        #with open(name_size_2_change, mode='a', newline='', encoding='utf-8') as file:
+            #writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            #writer.writerow(result_list)
 
-    elif len(list_text) == 2 and (len(list_text[0]) <= 10 and len(list_text[1]) <= 10):
+    if len(list_text) == 2:
         write_sentence_to_file(temp_used_data_2, used_text)
         if not os.path.exists(name_size_2):
             create_name_size_2()
