@@ -162,7 +162,7 @@ def create_sku_code_1():
 
 def create_folder_and_copy_data():
     fd_name = create_sku_code_1()
-    base_directory = r"C:\Users\Cong Dinh\Desktop\Sticker Image\image_base"
+    base_directory = r"E:\0.Sticker\image_base"
     new_folder_name = fd_name
 
     new_folder_path = os.path.join(base_directory, new_folder_name)
@@ -171,7 +171,7 @@ def create_folder_and_copy_data():
 
     source_directory = r"C:\Users\Cong Dinh\Desktop\Sticker Image"
 
-    destination_directory = f"C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\image_base\\{fd_name}"
+    destination_directory = f"E:\\0.Sticker\\image_base\\{fd_name}"
     folders_to_copy = ["1. PSD", "2. Main", "3. ULR1", "4. ULR2", "5. PNG", "temp_data"]
 
     for folder in folders_to_copy:
@@ -237,7 +237,7 @@ def upload_image_to_postimage(sku_name, type):
     driver = webdriver.Chrome()
     driver.get("https://postimages.org")
 
-    wait = WebDriverWait(driver, 60)
+    wait = WebDriverWait(driver, 120)
     upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//select[@id='expire']")))
     upload_button.click()
     pyautogui.sleep(1)
@@ -250,7 +250,7 @@ def upload_image_to_postimage(sku_name, type):
     pyautogui.sleep(1)
     pyautogui.press("enter")
 
-    wait = WebDriverWait(driver, 60)
+    wait = WebDriverWait(driver, 120)
     upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//span[@id='uploadFile']")))
     upload_button.click()
     pyautogui.sleep(2)
@@ -259,7 +259,7 @@ def upload_image_to_postimage(sku_name, type):
     pyautogui.sleep(2)
     pyautogui.press("enter")
 
-    wait = WebDriverWait(driver, 60)
+    wait = WebDriverWait(driver, 220)
     copy_button = wait.until(
         EC.presence_of_element_located((By.XPATH, "//button[@data-clipboard-target='#code_direct']")))
     copy_button.click()
@@ -272,8 +272,8 @@ def upload_image_to_postimage(sku_name, type):
     return copied_text
 
 def copy_Bumper_file():
-    source_path = "C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\image_base\\base_data\\BumperStickers.xlsm"
-    destination_path = "C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\temp_data\\BumperStickers.xlsm"
+    source_path = "C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\image_base\\base_data\\BumperStickersAAx3.xlsm"
+    destination_path = "C:\\Users\\Cong Dinh\\Desktop\\Sticker Image\\temp_data\\BumperStickersAAx3.xlsm"
     try:
         shutil.copy(source_path, destination_path)
         print(f"Đã sao chép {source_path} tới {destination_path}")
@@ -320,7 +320,7 @@ def upload_process():
 
 
 
-    sku_list = read_csv_file()
+    sku_list = read_csv_file(name_size_4)
 
     for sku in sku_list:
         sku_temp_main = upload_image_to_postimage(sku, "main")

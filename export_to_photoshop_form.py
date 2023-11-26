@@ -136,18 +136,17 @@ def export_file_to_csv(list_text, used_text):
             writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(result_list)
 
-    elif len(list_text) == 4 and (len(list_text[0]) > 18 or len(list_text[1]) > 18 or len(list_text[2]) > 18 or len(
-            list_text[3]) > 18):
-        write_sentence_to_file(temp_used_data_4_change, used_text)
-        if not os.path.exists(name_size_4_change):
-            create_name_size_4_change()
+    #elif len(list_text) == 4 and (len(list_text[0]) > 18 or len(list_text[1]) > 18 or len(list_text[2]) > 18 or len(
+            #list_text[3]) > 18):
+        #write_sentence_to_file(temp_used_data_4_change, used_text)
+        #if not os.path.exists(name_size_4_change):
+            #create_name_size_4_change()
 
-        with open(name_size_4_change, mode='a', newline='', encoding='utf-8') as file:
-            writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            writer.writerow(result_list)
+        #with open(name_size_4_change, mode='a', newline='', encoding='utf-8') as file:
+            #writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            #writer.writerow(result_list)
 
-    elif len(list_text) == 4 and (len(list_text[0]) <= 18 and len(list_text[1]) <= 18 and len(list_text[2]) <= 18 and len(
-            list_text[3]) <= 18):
+    elif len(list_text) == 4:
         write_sentence_to_file(temp_used_data_4, used_text)
         if not os.path.exists(name_size_4):
             create_name_size_4()
