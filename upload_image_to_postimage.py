@@ -320,6 +320,7 @@ def upload_process():
 
 
 
+
     sku_list = read_csv_file(name_size_2)
 
     for sku in sku_list:

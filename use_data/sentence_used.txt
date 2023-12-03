@@ -41,7 +41,7 @@ Me? Sarcastic? Never.
 its all made up white
 you matter aesthetic
 make yourself proud
-Motivation: Prove Them Wrong
+Motivation, Prove Them Wrong
 Be still, rest, Christian
 you’re done you are done
 Well Behaved Women
@@ -965,7 +965,7 @@ I've got a bone to pick with you
 To live for the hope of it all
 I hate stupid people
 Have courage and be KIND
-The Earth does not belong to us: we belong to the Earth. Vaquita belongs to the sea; let’s ensure it remains free.
+The Earth does not belong to us, we belong to the Earth. Vaquita belongs to the sea; let’s ensure it remains free.
 In the dance of life, the Vaquita is a graceful partner. Let's not allow this dance to end.
 Protecting the Vaquita is not just about saving a species; it’s about preserving the harmony of the ocean’s symphony.
 The beauty of the ocean lies in its biodiversity. Save the Vaquita, preserve the melody of the deep.
@@ -1003,56 +1003,56 @@ STAY SINGLE ANTI VALENTINE
 That Which Does Not Kill You
 I Just Wanna Give You The Creeps
 Don’t Believe Everything You Think
-Toaster: morning's turbocharger
-Toaster: faster than caffeine dreams
-Toaster: breakfast's escape artist
-Toaster's road rage: legendary
-Toaster: faster than your commute
-Toaster: breakfast's road king
-Toaster duel: challenge accepted
-Race with a toaster: burnt ego
-Toaster: crumbs of sunrise victory
-Toaster: not just for bread
-Toaster: burnt rubber, not toast
-Toaster: breakfast's dark horse
-Toaster: breakfast's speed demon
+Toaster, morning's turbocharger
+Toaster, faster than caffeine dreams
+Toaster, breakfast's escape artist
+Toaster's road rage, legendary
+Toaster, faster than your commute
+Toaster, breakfast's road king
+Toaster duel, challenge accepted
+Race with a toaster, burnt ego
+Toaster, crumbs of sunrise victory
+Toaster, not just for bread
+Toaster, burnt rubber, not toast
+Toaster, breakfast's dark horse
+Toaster, breakfast's speed demon
 Lost to a toaster Burnt competition?
 Passed by a toaster Toasted irony
-Toaster: race partner or rival?
-Race against Toaster: carb karma?
-Toaster: sunrise speedster
-Toaster: faster than instant
-Race tip: Toaster uses jet fuel
-Race the toaster: breadwinner
-Race the toaster: pop goes you
+Toaster, race partner or rival?
+Race against Toaster, carb karma?
+Toaster, sunrise speedster
+Toaster, faster than instant
+Race tip, Toaster uses jet fuel
+Race the toaster, breadwinner
+Race the toaster, pop goes you
 Lost to a toaster Crispy pride?
-Race tip: Toaster knows shortcuts
+Race tip, Toaster knows shortcuts
 Lost race to toaster Crispy fun?
-Toaster duel: crumbs or conquest?
-Toaster: outrunning breakfast blues
-Race tip: Toaster takes shortcuts
+Toaster duel, crumbs or conquest?
+Toaster, outrunning breakfast blues
+Race tip, Toaster takes shortcuts
 Passed by a toaster Toasty irony
-Toaster: morning's escape artist
+Toaster, morning's escape artist
 Defeated by a turbo toaster Crispy?
-Toaster: beats traffic, not bread
-Toaster: roadrunner of breakfast lanes
+Toaster, beats traffic, not bread
+Toaster, roadrunner of breakfast lanes
 Lost to a toaster Butter luck!
-Toaster: faster than caffeine
-Race with Toaster: pop goes the ego
-Toaster: speeding towards dawn
-Toaster duel: crumbs or glory?
-Toaster duel: crumbs or conquest?
-Toaster: beats the morning rush
-Toaster: leaving trails of triumph
-Toaster: faster than you butter be
-Race with Toaster: pop goes pride
+Toaster, faster than caffeine
+Race with Toaster, pop goes the ego
+Toaster, speeding towards dawn
+Toaster duel, crumbs or glory?
+Toaster duel, crumbs or conquest?
+Toaster, beats the morning rush
+Toaster, leaving trails of triumph
+Toaster, faster than you butter be
+Race with Toaster, pop goes pride
 Lost to a toaster Toasted ego?
-Toaster: outrunning Monday blues
+Toaster, outrunning Monday blues
 Passed by a toaster Crispy joke
-Toaster: crumbs of victory!
-Race against toaster: dawn dash
+Toaster, crumbs of victory!
+Race against toaster, dawn dash
 Lost to a toaster Toast-worthy?
-Toaster: not just a kitchen tool
+Toaster, not just a kitchen tool
 You're a towel!
 A wild snuke appears!
 I'm not just sure, I'm HIV positive.
@@ -1382,7 +1382,7 @@ Adventure awaits where the wild dreams are nurtured
 For those who dream, the wild is a boundless canvas
 Born to explore, thrive in the great unknown
 In the heart of the wild, discover your own wilderness
-Life's journey: wild, free, and uncharted
+Life's journey, wild, free, and uncharted
 Wandering minds find solace in the vastness of the wild
 Born to explore, destined for the untamed
 Open roads, wild spirits, endless possibilities
@@ -1436,7 +1436,7 @@ Protect the Blue, Keep Tahoe True
 Reflections of eternity, mirrored in Tahoe's depths
 Preserving Tahoe's magic, one drop at a time
 Where the Sierra whispers and Tahoe sparkles
-Cherish the Clarity, Defend the Diversity: Tahoe's Pledge
+Cherish the Clarity, Defend the Diversity, Tahoe's Pledge
 Guardians of clarity, Tahoe's timeless keepers
 Tahoe's aura, a sanctuary of tranquility
 Cherishing Tahoe's allure, a pact with nature
@@ -1469,7 +1469,7 @@ Tahoe's heartbeat, where nature finds its eternal rhythm
 Guardians of the Lake, protectors of Tahoe's charm
 In Tahoe's depths, reflections of eternity
 Preserving Tahoe's purity, a shared responsibility
-Blue is the New Gold: Water Conservation for Tahoe
+Blue is the New Gold, Water Conservation for Tahoe
 Azure secrets unfold in Tahoe's pristine depths
 Guardians of the blue, stewards of Tahoe's splendor
 Nature's cathedral, Tahoe's waters a sacred hymn
@@ -1478,7 +1478,7 @@ Eternal beauty, Tahoe's gift to the Sierra's soul
 Tahoe's sanctuary, a haven for the soul
 Preserve Tahoe's clarity, let it be a beacon
 Cherish Tahoe's glow, let it forever flow
-Tahoe's Legacy: Stewards for Generations
+Tahoe's Legacy, Stewards for Generations
 Guardians of clarity, Tahoe's eternal keepers
 Eternal blue, where heaven meets Tahoe's waters
 Preserve Tahoe's purity, a vow to nature's embrace
@@ -1494,12 +1494,12 @@ Defenders of Tahoe, warriors for its eternal purity
 Guardians of Tahoe, stewards of its splendor
 In Tahoe's embrace, find solace and timeless grace
 Cherishing Tahoe's legacy, nature's masterpiece
-Lake Tahoe: Jewel of the Sierra, Crown of Conservation
+Lake Tahoe, Jewel of the Sierra, Crown of Conservation
 Protect the gem, cherish the Tahoe gleam
 Safeguarding Tahoe's clarity, a shared commitment
 Guarding Tahoe's heart, a promise to nature
-Guardians of the Sierra: Defenders of Tahoe's Blue
-Tahoe's Heartbeat: Conservation in Every Drop
+Guardians of the Sierra, Defenders of Tahoe's Blue
+Tahoe's Heartbeat, Conservation in Every Drop
 Blue is the treasure, Tahoe is the chest
 Tahoe's allure, an ode to nature's beauty
 Conserving Tahoe, where every drop matters
@@ -1515,85 +1515,85 @@ Tahoe's poetry, written on every ripple
 Tahoe's charm, where the Sierra whispers secrets
 Slow down, kangaroo mice about
 Cruise control for America's pouch posse
-Pouch pioneers: ease off the gas pedal
-Slow down: pouches in the area
-Hit the brakes: marsupials about!
+Pouch pioneers, ease off the gas pedal
+Slow down, pouches in the area
+Hit the brakes, marsupials about!
 Speed bump for USA's pouch perfection
 Brake for possum pockets of joy
-Pause for paws: America's pouch pioneers
-Slow down: pouches on the move
+Pause for paws, America's pouch pioneers
+Slow down, pouches on the move
 Watch out! Marsupials on the loose
 Brake for marsupial magic in the USA
-Hit the brakes: marsupials on the move
+Hit the brakes, marsupials on the move
 Slow down, kangaroo mice crossing
-Pouch parade ahead: tap the brakes!
-Slow down: pouches crossing ahead
-Slow down: pouches at play
+Pouch parade ahead, tap the brakes!
+Slow down, pouches crossing ahead
+Slow down, pouches at play
 Slow down, pouches crossing ahead!
 Slow down, kangaroo mice about
-Pouch patrol: slow and steady
+Pouch patrol, slow and steady
 Brake for marsupial mayhem!
 I slow down for America's hopping wonders
-Marsupials rule: brake for cool!
-Hit the brakes: pouches at play!
-Marsupial Crossing: Take it slow!
+Marsupials rule, brake for cool!
+Hit the brakes, pouches at play!
+Marsupial Crossing, Take it slow!
 Brake for wildlife wonders in pouches
 Tap the brakes for America's marsupials
-Pouch parade ahead: gentle on the gas!
-Ease off: pouch patrol in progress
+Pouch parade ahead, gentle on the gas!
+Ease off, pouch patrol in progress
 Brake for marsupial magic!
-Pouch pioneers: hit the brakes!
-Pouch pioneers: ease off the gas
-Ease off: kangaroo mice crossing
-Drive safe: pouches on the loose!
+Pouch pioneers, hit the brakes!
+Pouch pioneers, ease off the gas
+Ease off, kangaroo mice crossing
+Drive safe, pouches on the loose!
 Tap the brakes for pouch perfection
-Hit the brakes: marsupials at play
+Hit the brakes, marsupials at play
 Brake for marsupial mayhem ahead!
 Ease off for America's pouch pals
-Hit the brakes: marsupials on board!
-Marsupial mayhem ahead: brake!
+Hit the brakes, marsupials on board!
+Marsupial mayhem ahead, brake!
 Cruise control for possum pockets
 Brake for the joy of marsupials
 Tap the brakes for pouches galore!
-Pouch pioneers: brake with care
-Pouch parade: slow and steady
-Hit the brakes: pouches in motion
+Pouch pioneers, brake with care
+Pouch parade, slow and steady
+Hit the brakes, pouches in motion
 Watch out! Marsupials on the move
 Tap the brakes for marsupial charm
-Marsupial Xing: brake for joy
+Marsupial Xing, brake for joy
 Cruise control for marsupial moments
-Brake for wildlife: America's pouch patrol!
-Marsupial Xing: ease off the gas
-Marsupial Xing: slow it down!
+Brake for wildlife, America's pouch patrol!
+Marsupial Xing, ease off the gas
+Marsupial Xing, slow it down!
 Ease off for America's pouch parade
 Brake for America's hopping wonders
-Pouches roam free: slow it down!
-Possum pockets: brake with care
+Pouches roam free, slow it down!
+Possum pockets, brake with care
 Slow down, pouches at play!
-Pouch parade: gentle on the gas pedal
+Pouch parade, gentle on the gas pedal
 Brake for possum pockets of charm
-Pouch patrol: gentle on the gas pedal
+Pouch patrol, gentle on the gas pedal
 Cruise control for pouch perfection
-Reality check: patience lost
+Reality check, patience lost
 Tranquility? Not today
-Stress level: legend
+Stress level, legend
 I'm on 'annoyance autopilot'
 Nerve's silent protest ongoing
 Irritation nation representative
 My patience filed for divorce
 Epic eye roll in progress
-Stress anthem: play on repeat
+Stress anthem, play on repeat
 Last nerve is MIA
-Patience: retired veteran
-Happiness: buffering forever
-Caution: nerve demolition ahead
-Calm: endangered species
-Chill status: unavailable
-Warning: irritation imminent
+Patience, retired veteran
+Happiness, buffering forever
+Caution, nerve demolition ahead
+Calm, endangered species
+Chill status, unavailable
+Warning, irritation imminent
 Serenity now? Never
-Nerve overload: error 404
-Chill vibes: temporarily out
-Serene state: under repair
+Nerve overload, error 404
+Chill vibes, temporarily out
+Serene state, under repair
 Epic stress symphony director
 Calmness on strike
 I'm a patience marathoner
@@ -1601,25 +1601,25 @@ Eye-twitch mode activated
 Zen? More like Zzzz
 Annoyance guru in training
 My nerves are on strike
-Warning: irritation zone
-Annoyance level: off the charts
+Warning, irritation zone
+Annoyance level, off the charts
 Eye roll championship contender
 Peace left the building
 Zen? Lost in transit
 Nerve's eviction notice sent
-Sarcasm proficiency: expert
+Sarcasm proficiency, expert
 Tranquility in hibernation
 Eye roll marathon winner
-Epic patience quest: failed
+Epic patience quest, failed
 Calmness crisis alert
 You're the reason I meditate
 Mindfulness on vacation
 Irritate responsibly Or not
 Chaos conductor at your service
-Crisis averted: not really
+Crisis averted, not really
 Stay calm, they said Oops
-Patience: ghosted me
-Stress level: expert
+Patience, ghosted me
+Stress level, expert
 Serene? Not in this lifetime
 Epic eye roll loading
 Tolerance under construction
@@ -1723,87 +1723,87 @@ Does Someone Need a Hug
 You Look Like Bad News
 It's not Criminal to be an Individual!
 Vaquitas cry for salvation. Be the force that echoes through oceans, save them
-Vaquita's whisper: Hear it now. Speak for the voiceless, save the ocean's jewel
-Fight for Vaquitas: Guardians of the ocean, defenders of biodiversity
-Protect the Vaquita legacy: A symbol of nature's fragile beauty
+Vaquita's whisper, Hear it now. Speak for the voiceless, save the ocean's jewel
+Fight for Vaquitas, Guardians of the ocean, defenders of biodiversity
+Protect the Vaquita legacy, A symbol of nature's fragile beauty
 Vaquitas face the abyss. Stand on the edge of change, protect their sanctuary
-Vaquita conservation: A shared responsibility, a testament to our stewardship
-Vaquita SOS: Their plea echoes. Unite for their survival, break the silence
+Vaquita conservation, A shared responsibility, a testament to our stewardship
+Vaquita SOS, Their plea echoes. Unite for their survival, break the silence
 Vaquitas need champions. Rise above the noise, be the resounding call for their survival
 Vaquitas' legacy at stake. Weave a story of protection, script their survival
 Vaquitas plea for sanctuary. Stand as the fortress, be their refuge
-Vaquitas silent plea: Break the chains, let their song resonate through the seas
-Guardianship for Vaquitas: A pledge to preserve, a promise for posterity
+Vaquitas silent plea, Break the chains, let their song resonate through the seas
+Guardianship for Vaquitas, A pledge to preserve, a promise for posterity
 Vaquita heartbeat weakens. Revive their pulse, champion their cause, save the ocean's melody
 Vaquita symphony in peril. Conduct change, orchestrate survival, save the notes
-Vaquita plight: A battle against time, a fight for marine harmony. Engage now
+Vaquita plight, A battle against time, a fight for marine harmony. Engage now
 Protect the Vaquita porpoise! Their existence hangs in the balance. Take a stand, act now, save a species
 Vaquita survival demands action. Be their ally in the fight for existence
 Vaquitas are fading. Rise like a tidal wave—save them from extinction
-Join the Vaquita mission: Preserve, Conserve, and Ensure a Future
+Join the Vaquita mission, Preserve, Conserve, and Ensure a Future
 Vaquitas are counting on us. Seize the urgency, act boldly, secure their future
 Vaquita guardians needed. Be the shield, stand resilient, protect their haven
-Vaquita resilience: Let's ensure their future, protect the ocean's heartbeat
-Defend the Vaquita: a voiceless species on the brink of silence
+Vaquita resilience, Let's ensure their future, protect the ocean's heartbeat
+Defend the Vaquita, a voiceless species on the brink of silence
 Vaquita hope flickers. Ignite a flame of action, protect them from shadows
-Vaquitas' call to arms: Break the stillness, create ripples, save their symphony
-Vaquita defenders unite: Break the silence, shatter the threat, save the species
-Vaquita salvation: Rise like a tide, engulf them in protection, preserve their grace
+Vaquitas' call to arms, Break the stillness, create ripples, save their symphony
+Vaquita defenders unite, Break the silence, shatter the threat, save the species
+Vaquita salvation, Rise like a tide, engulf them in protection, preserve their grace
 Vaquita survival is in our hands. Rise up, speak out, protect them
-Vaquita anthem: A plea for existence. Rise as the chorus, sing their salvation
+Vaquita anthem, A plea for existence. Rise as the chorus, sing their salvation
 Vaquita porpoises need warriors. Will you stand up for their survival?
 Vaquitas in peril. Stand tall, stand fierce, be the guardians of their world
-Urgent call: Save the Vaquita, an emblem of marine resilience
+Urgent call, Save the Vaquita, an emblem of marine resilience
 Vaquita legacy at stake. Roar against indifference, stand for their survival
-Save Vaquitas: Guardians of the sea, ambassadors of marine conservation
+Save Vaquitas, Guardians of the sea, ambassadors of marine conservation
 Vaquitas at the crossroads. Be the guide, lead them to a sanctuary of safety
 Vaquitas plead for survival. Answer with unwavering commitment, defend their world
-Vaquita: A symbol of resilience, a beacon in the storm. Shield them from extinction
+Vaquita, A symbol of resilience, a beacon in the storm. Shield them from extinction
 Vaquitas' last dance. Be the choreographer, protect their oceanic ballet
 Vaquita echoes fade. Break the silence, amplify their plea, be their advocate
-Save the Vaquita: A battle cry for marine life, a call to action
-Vaquita heartbeat: A fading drum. Beat with resilience, echo their survival
+Save the Vaquita, A battle cry for marine life, a call to action
+Vaquita heartbeat, A fading drum. Beat with resilience, echo their survival
 Vaquitas vanish in silence. Roar loud for their survival, be their voice
-Vaquita plea: Act decisively, preserve their oceanic haven
+Vaquita plea, Act decisively, preserve their oceanic haven
 Vaquitas fading away. Stand as a barrier, shield them from the storm
 Vaquita heartbeat fading. Surge with determination, resuscitate their melody
-Defend the Vaquita: Warriors needed to shield these gentle marine souls
+Defend the Vaquita, Warriors needed to shield these gentle marine souls
 Vaquita warriors needed. Embrace the fight, protect the oceans, save a species
-Vaquitas on the edge: Rally for their survival, protect our oceans
+Vaquitas on the edge, Rally for their survival, protect our oceans
 Vaquitas' existence hanging by a thread. Stitch a fabric of protection, save a species
 Vaquitas face oblivion. Your voice can rewrite their destiny. Speak up
-Vaquitas: A rallying cry for conservation, a battle cry for life's harmony
+Vaquitas, A rallying cry for conservation, a battle cry for life's harmony
 Vaquitas face the abyss. Stand on the brink, be the force of revival
 Vaquitas fight for breath. We fight for their existence. Join the battle
-Vaquitas at risk: Stand strong, protect our oceans, save a legacy
-Vaquita: A symbol of oceanic grace, let's safeguard their existence
+Vaquitas at risk, Stand strong, protect our oceans, save a legacy
+Vaquita, A symbol of oceanic grace, let's safeguard their existence
 Vaquitas on the brink. Let courage be the current that carries them to safety
 Vaquitas on the edge. Ignite the flame of change, save their sacred dance
-Vaquitas' plea: Break the chains, release them into the ocean's embrace
+Vaquitas' plea, Break the chains, release them into the ocean's embrace
 Vaquita dreams at risk. Awake the world, let their existence be a shared dream
 Vaquitas matter. Act today to ensure a tomorrow for these marine wonders
-For the Vaquita: Unite, advocate, and be the voice they need
+For the Vaquita, Unite, advocate, and be the voice they need
 Conquer the unknown, let curiosity be your guide
 Why don't scientists trust atoms? Because they make up everything
 Sleeping bags are like hugs from nature, keeping you warm in its embrace
 Camping is my therapy Marshmallows, campfires, and no cell service—pure bliss
 Sleep under the stars, wake up to adventure That's the camping magic
-Camping: where the stars replace city lights, and the fire tells stories
+Camping, where the stars replace city lights, and the fire tells stories
 Life is an epic quest—seek the extraordinary in every moment
 I'm not saying it's been a bad day, but even my coffee needs coffee
-Camping rule #1: Pack more snacks than you think you'll need It's science
+Camping rule #1, Pack more snacks than you think you'll need It's science
 Stars can't shine without darkness Camp to see the brightest constellations
 Discovering new frontiers, one adventure at a time
 Adventure knows no limits; it's the pursuit of the limitless
 Redefine exploration; let your spirit wander where maps end
-Sleeping bag: because who doesn't love feeling like a human burrito in nature?
+Sleeping bag, because who doesn't love feeling like a human burrito in nature?
 I tried camping once The bugs didn't like my tent, so they invited the whole neighborhood
 I told my wife she was drawing her eyebrows too high She looked surprised
-Camping is like a fine wine: it gets better when shared, and it's best enjoyed outdoors
+Camping is like a fine wine, it gets better when shared, and it's best enjoyed outdoors
 I'm on a seafood diet I see food and I eat it
 Campers don't just go outdoors; they become part of the outdoors
 Adventure is calling, but my bed has a pretty convincing argument against it
-Camping: Where s'mores turn into a well-balanced breakfast, and granola bars are considered dessert
+Camping, Where s'mores turn into a well-balanced breakfast, and granola bars are considered dessert
 The horizons are endless, explore them with relentless curiosity
 Venture into the unknown and discover what awaits
 I'm on a whiskey diet I've lost three days already and found a mountain
@@ -1811,18 +1811,18 @@ Embark on courageous expeditions, where challenges are conquered
 Camping is my way of pretending I'm a survivalist without actually having to survive
 I'm reading a book on anti-gravity It's impossible to put down
 They say don't try this at home, so I'm coming over to your house to try it
-Camping hack: Leave the kids at home Suddenly, nature is a peaceful sanctuary
+Camping hack, Leave the kids at home Suddenly, nature is a peaceful sanctuary
 Blaze trails and create adventures worth sharing
 Experience the thrill of the unknown, where each moment is a surprise
 Navigate uncharted territories and write your own adventure
 Explore the wilderness, where every step is a discovery
 Pitch a tent, pitch your worries Nature has a remedy for the soul
-Camping: the only time where getting dirty is socially acceptable and encouraged
-Camping: where coffee tastes better, and worries taste like marshmallows
+Camping, the only time where getting dirty is socially acceptable and encouraged
+Camping, where coffee tastes better, and worries taste like marshmallows
 Camping is the only time my phone battery lasts longer than my patience
 Camping is nature's way of promoting the flashlight industry
 I'm not lazy; I'm just on energy-saving mode
-Camping rule: If it looks like a bear and smells like a bear, it's a raccoon
+Camping rule, If it looks like a bear and smells like a bear, it's a raccoon
 Roast marshmallows, make memories, and leave only footprints behind
 Seek the extraordinary in the ordinary, find wonder in every step
 Camping is the pause button in the symphony of life
@@ -1831,9 +1831,9 @@ I asked the librarian if the library had any books on paranoia She whispered, 'T
 Make daring discoveries that redefine your understanding of the world
 I don't need an alarm clock; my bladder is my wake-up call when camping
 I have a joke about construction, but I'm still working on that one
-Campfires and constellations: where ordinary moments become extraordinary memories
+Campfires and constellations, where ordinary moments become extraordinary memories
 My favorite exercise is a cross between a lunge and a crunch I call it lunch
-Camping: a passport to the land of serenity and discovery
+Camping, a passport to the land of serenity and discovery
 I told my wife she should embrace her mistakes She gave me a hug
 The best therapy is forest therapy—found at a campsite near you
 Camping is the only time I consider 'roughing it' as no room service
@@ -1850,14 +1850,14 @@ Camping is the art of getting lost and finding yourself in the process
 If a camper doesn't Instagram their trip, did they even camp?
 I asked the forest for Wi-Fi It didn't respond Rude trees
 I used to play piano by ear, but now I use my hands and fingers
-Camping fact: The closer you get to nature, the farther you are from your bed
+Camping fact, The closer you get to nature, the farther you are from your bed
 I told my computer I needed a break, and now it won't stop sending me vacation ads
 I used to be a baker because I kneaded dough
-I only need three things in life: Food, Wi-Fi, and a convincing reason to leave my couch
+I only need three things in life, Food, Wi-Fi, and a convincing reason to leave my couch
 I'm not lazy; I'm in energy-saving mode
 Boldly go where no one has gone before, embrace the thrill of exploration
 I'm not clumsy; I'm just testing gravity, and it still works
-Find your wild: pitch a tent, breathe the air, live the adventure
+Find your wild, pitch a tent, breathe the air, live the adventure
 My dog used to chase people on a bike It got so bad, I had to take his bike away
 Embrace the journey, for in it lies the essence of true adventure
 Camping is just a way to turn a regular weekend into a story-worthy adventure
@@ -1878,7 +1878,7 @@ GO BE ABSOLUTELY POSITIVELY FUCKING ANGELIC
 keep your heels, head, and standards high.
 Indecision may or may not be my problem
 Sorry i'm late i didn't want to come
-Pain is inevitable: suffering is optional.
+Pain is inevitable, suffering is optional.
 someone will remember us
 Faith is greater than fear
 They have a cave troll
@@ -2058,59 +2058,326 @@ What A Long Strange Trip It's Been
 Treat People with Kindness
 Please Don't Honk, I'm SENSITIVE
 Normalize Hitting the Curb
-Opossums: masters of the surprise party, pretending to be roadkill
-Opossums: nature's clean-up crew. They're the real MVPs of backyard sanitation
-Opossums: reminding us that a well-timed fainting spell can be pure genius
-Opossums: because 'playing possum' is more fun than adulting any day
+Opossums, masters of the surprise party, pretending to be roadkill
+Opossums, nature's clean-up crew. They're the real MVPs of backyard sanitation
+Opossums, reminding us that a well-timed fainting spell can be pure genius
+Opossums, because 'playing possum' is more fun than adulting any day
 They may look grumpy, but opossums are the backyard custodians we didn't know we needed
-If opossums had a motto: 'Act dead, live fabulously
-Opossums: teaching us the value of a good 'fake it till you make it
-Opossums: proof that you can look fabulous even when caught in the headlights
-The original recyclers: opossums turn leftovers into a feast and leave no trace
+If opossums had a motto, 'Act dead, live fabulously
+Opossums, teaching us the value of a good 'fake it till you make it
+Opossums, proof that you can look fabulous even when caught in the headlights
+The original recyclers, opossums turn leftovers into a feast and leave no trace
 Opossums are the real magicians, disappearing before your trash even notices
-Opossums: the only creatures that turn 'playing dead' into a lifestyle choice
+Opossums, the only creatures that turn 'playing dead' into a lifestyle choice
 Why don't opossums gamble? Because they're always folding and playing dead!
 Opossums are nature's drama queens, perfecting the art of fake fainting
-Opossums: the underappreciated comedians of the animal kingdom, with their 'playing possum' routine
-Opossums: the original escape artists, vanishing like magic when things get tough
+Opossums, the underappreciated comedians of the animal kingdom, with their 'playing possum' routine
+Opossums, the original escape artists, vanishing like magic when things get tough
 Opossums are the silent comedians of nature, with a talent for the art of surprise
 Why did the opossum become a stand-up comedian? Its deadpan delivery was unbeatable!
 Opossums, the only creatures that can make 'playing dead' look fashionable
 Opossums are the original stealth experts, silently patrolling our yards for unwanted guests
 Why did the opossum become a therapist? It had a knack for 'playing possum' with emotions
-Opossums: the original influencers of the 'playing possum' trend
-Opossums: the only creatures that can make a dumpster look like a five-star hotel
-An opossum's strategy: play dead, then sneak away like a furry ninja
+Opossums, the original influencers of the 'playing possum' trend
+Opossums, the only creatures that can make a dumpster look like a five-star hotel
+An opossum's strategy, play dead, then sneak away like a furry ninja
 Opossums make playing dead trendy; zombies got nothing on them
 Opossums are the Jedi knights of acting dead, mastering the force of surprise
 Opossums are the original influencers, turning playing dead into an art form
-Opossums: making 'playing possum' an art form since time immemorial
-Opossums: the backyard acrobats, gracefully hanging by their tails and stealing hearts
+Opossums, making 'playing possum' an art form since time immemorial
+Opossums, the backyard acrobats, gracefully hanging by their tails and stealing hearts
 Opossums are like furry custodians, silently tidying up our yards while we sleep
-Opossums: teaching us resilience by pretending to be roadkill and bouncing back
+Opossums, teaching us resilience by pretending to be roadkill and bouncing back
 If life gives you lemons, opossums suggest playing dead and avoiding the sour
-Opossums: because sometimes the best defense is a well-executed fainting spell
-Opossums: the natural actors, turning every encounter into a suspense thriller
+Opossums, because sometimes the best defense is a well-executed fainting spell
+Opossums, the natural actors, turning every encounter into a suspense thriller
 Opossums are the real-life Houdinis, escaping life's traps with a dramatic flair
-Opossums: the wildlife superheroes, quietly saving the day by keeping pests in check
+Opossums, the wildlife superheroes, quietly saving the day by keeping pests in check
 Opossums play dead better than I handle Mondays
-Opossums: because playing dead is easier than adulting
-Opossums: the original masters of 'hit the floor and play dead
-Opossums: making midnight appearances to keep the neighborhood bug population in check
+Opossums, because playing dead is easier than adulting
+Opossums, the original masters of 'hit the floor and play dead
+Opossums, making midnight appearances to keep the neighborhood bug population in check
 Opossums are nature's response to the question, 'What if spaghetti was a mammal?'
 Did you hear about the opossum's cooking show? It's called 'Playing Possum in the Kitchen
-In the possum playbook: 'Play dead, then waddle away unnoticed Genius
+In the possum playbook, 'Play dead, then waddle away unnoticed Genius
 Why did the opossum bring a ladder? To get to the 'high' ground when things got scary
-Opossums: the silent critics of human drama, perfecting the eye-roll since forever
-If opossums were motivational speakers: 'Life might be trash, but play it dead cool
+Opossums, the silent critics of human drama, perfecting the eye-roll since forever
+If opossums were motivational speakers, 'Life might be trash, but play it dead cool
 Opossums play hide and seek like pros; they're always hiding when you least expect it
-Opossums at a party: the only guests who can make 'playing possum' a social activity
+Opossums at a party, the only guests who can make 'playing possum' a social activity
 Opossums are the undercover agents of the animal kingdom, masters of deception
 Why did the opossum start a comedy club? Because it nailed the deadpan!
-If opossums wrote self-help books: 'The Art of Playing Dead and Thriving
-Opossums: the nocturnal neighbors that turn trash into treasure while we sleep
-Opossums: nature's cleanup crew, turning trash heaps into tidy habitats
+If opossums wrote self-help books, 'The Art of Playing Dead and Thriving
+Opossums, the nocturnal neighbors that turn trash into treasure while we sleep
+Opossums, nature's cleanup crew, turning trash heaps into tidy habitats
 Opossums are the real acrobats of the animal kingdom, turning fences into high-wire acts
 What did one opossum say to the other at a party? 'Let's play dead and steal the spotlight
-Opossums: the unsung heroes of pest control, keeping the critters at bay
+Opossums, the unsung heroes of pest control, keeping the critters at bay
 If opossums had a band, they'd be called 'The Deadbeats'—playing hits while playing dead
+All people are born as originals
+why would you lie to me
+We are best friends because everyone else sucks!
+Don't be like the rest of them darling
+i make science puns, but only periodically
+Plot Plan Strategize Organize Mobilize
+Dance Teacher Dancers Are My People square
+do you like fish sticks joke
+History, huh? Bet we could make some
+i feel like i'm already tired tommorow
+Life Happens, Coffee Helps Sunflower
+The Mountains Are Calling And I Must Go
+You're Amazing Keep That Shit Up
+We're all just walking each other home
+words are our most inexhaustible source of magic
+hope is the only thing stronger than fear
+Ain't No Mountain High Enough!
+i'm not convinced I know how to read
+Intelligence without Ambition
+Never memorize something that you can look up
+oh yeah, terribly funny really witty
+sorry i'm late i didn't want to come
+She Leaves A Little Sparkle Wherever She Goes
+Read The Constitution
+you got a dope soul and hella ethics
+You could call raccoons cunning artists, creating masterpieces from stolen goods
+Raccoons prefer being trash hunters over nature guides
+Raccoons, experts at turning every painting into a garbage masterpiece
+Raccoons are the official ambassadors of the 'Mysterious League of Garbage Lurkers
+If you think you have a perfect garden, try placing a trash can and see what raccoons have to say about itRaccoons the unofficial allies of nighttime strolls
+Why do raccoons always look like they're up to no good? It's that mischievous glint in their eyes
+Raccoons are ethical experts, showing us the true value of garbage
+Raccoons are the unofficial mascots of the urban jungle, adapting to city life like pros
+Why do raccoons disrupt meals? They're expressing their love for food in a 'freedom of choice' style
+Raccoons are the masters of disappearance, often vanishing after they've done it all
+Raccoons are the number one secret to keeping food always in your house, put it in the trash can!
+Raccoons, professors in the art of 'looking away and digging deep'
+Raccoons are nature's little burglars, stealing snacks and disappearing into the night
+Raccoons are like the rockstars of the backyard, always causing a ruckus
+Raccoons have a Ph.D. in raiding trash cans, it's like they invented dumpster diving
+I set up a camera to catch a raccoon playing tricks. It brought back a trash can as a reward for its acting career
+If raccoons had a motto, it would be 'The best place to find food in the trash can!
+When you think of raccoon professions, they chose to be garbage security instead of environmental caretakers
+If raccoons had a talent show, they'd win in the category of 'Getting into places they shouldn't
+The masked marauders strike again! Raccoons are the ninjas of the animal kingdom
+You can't underestimate the intelligence of raccoons; they'll find a way to get what they want
+Every time I think I've sealed the trash can, raccoons just make me feel like the victim of a big joke
+You know it's garbage day when the raccoons throw a party on the street
+When raccoons want to throw a party, they open a restaurant called 'From Garbage to Table
+Raccoons nature's bungee jumpers, experts in diving without the cords
+I tried to outsmart a raccoon once, but those little bandits are always one step ahead
+When a raccoon says 'My home is a castle,' they're actually talking about a trash can
+If raccoons had titles, they'd be the 'Leaders in the Trashology Market
+Raccoons, the natural experts in 'bringing the trash home
+the library is a Wilderness of Books
+Don’t you dare settle for fine
+You Can’t Take Loved Away
+FLOWERS DIDN'T DO ANYTHING WRONG
+All Bodies Are Good Bodies Body
+Difficult Roads Often Lead To Beautiful Destinations
+You are not alone
+Happiness is found in small thing
+Life Isn't Fair, It Is Balanced
+love is awful
+I Workout Because Punching People Is Frowned Upon
+Support Your Local Bartender
+oh yeah, terribly funny, really witty
+The Mountains are Calling, and I Must Go
+We do not remember days, we remember moments
+the whole being dead thing
+Imagine All the People Living Life in Peace
+TRUTH IS THE NEW HATE SPEECH
+Another Fine Day Ruined by Responsibility
+Heaven must be our home
+I'm Tired Of Thinking About Things
+Beautiful girl, you can do hard things
+Smiling is my Favorite
+We Rise by Lifting Others
+Reading and coffee because murder is wrong
+I just cry sometimes it's no big deal
+You're My Wonderwall
+I KNOW THAT I KNOW NOTHING
+introverted but willing to discuss books
+My Broom Broke So I Became an Accountant
+well behaved women rarely make history
+But what is grief if not love persevering
+alright dude, go trip over a knife
+I didn't go through all that for nothing
+Make today your bitch
+Who's Gonna Carry the boats
+Stop acting like a disgruntled pelican
+you are utterly indecent
+Let's keep the dumbfuckery to a minimum today
+All Choices Have Consequences Choose Wisely
+Outwork Everyone
+And In The Morning I'm Makin' Waffles!
+She's Got A Book For Every Situation
+I’m not convinced I know how to read
+don't make me use my flight attendant voice
+I Paint Because Punching People Is Frowned Upon
+My girlfriend is hotter than yours .
+Just Because You're Struggling Doesn't Mean You're Failing
+Introverted But Willing To Discuss book
+Ask Me About My Lobotomy
+Warning Don't Do Coke In Bathroom
+Make My Coffee Icy And My Books Spicy
+Not in the mood for shape based jokes
+people are particularly stupid today
+What do you have? A Knife!
+enjoy the butterflies
+You are the main character
+We're All Mad Here
+I May Never Come Down to Earth Again
+Go Get Em Brothers
+At Least All This Trauma Made Me Hilarious
+Will Work For Primogems
+don't let anyone make you disappear
+Good things are coming
+What you Think You Create Spiritual
+Be Brave Like Ukraine
+Sorry I'm Late Didn't Want To Come
+Only justice will bring peace
+This is not a moment it's the MOVEMENT.
+Faith Can Move Mountains
+be fearless in the pursuit of your passions
+Every Little Thing is Gonna Be Alright
+You Can't Scare Me I Rescue Cattle Dogs
+Truth is a matter of the imagination
+I'm Not Addicted To Wrestling
+tress in your eyes stars in your heart
+Hell Was Full So I Came Back
+Joy in the morning
+Be Kind to the Earth
+Can't Spell College Without a Few L's
+Life Is Better Upside Down
+Your Existence is Essentially Irrelevant
+He slipped his tongue into my MOUTH!
+A Very Risky Gamble
+Teamwork Makes The Dream Work
+How can you sit there and EAT PIZZA?
+you are depriving some village of their idiot
+It's Fine I'm Fine Everything's Fine
+impossible is my specialty
+The First Rule Of Human Resources Is Coffee
+Education Is Important But game Is Importanter
+Mother Should I Trust The Government?
+Decisions are made by those who show up
+She was beautiful
+God is within her, she will not fall
+Show yourself Step into your power
+We've found the witch, may we burn her?
+She turned me into a newt!
+It's just a flesh wound
+I'm not dead yet
+You Aint Cool Unless You Pee Your Pants
+this is calm, and it's doctor
+Sleep When You're Dead
+Books! The best weapons in the world!
+All you need is to believe in yourself
+anyways, i'm gonna go cry in the bathroom
+Don't Make Me Repeat Myself
+THICK THIGHS SAVE LIVES
+Looking for Myself
+Life Is Full Of Important Choices
+i have asked you thrice
+Army Strong
+Aim High
+This We'll Defend
+Always Ready
+Is your social worker in that horse?
+What's Your Favorite Scary Movie?
+If we could all spread a little sunshine
+Did You Try Getting Good?
+Direction is more important than speed
+when people say impossible they usually mean improbable
+I don't take the pressure I drink it
+God created you for a purpose
+NO GUNS AT THE DINNER TABLE
+You Have Survived 100% of Your Bad Days
+Water is for Toilets
+Meet me at the Bar
+Offensive Amount of Adulting
+THE secret s gratitude
+Ain't that just the way
+Freaking Amazing Veterinary Receptionist
+Love is indomitable
+Down the Research Rabbit Hole
+Don't Believe Everything You Think
+Inspirational, Purpose of Life
+Dream. Try Do Good.
+A ship in port is safe
+Stop Screaming I'm Scared Too!
+Remember Why You Started
+Everyone Is Literally Being So Rude Right Now
+If you are always trying to be normal
+Start Each Day with a Grateful Heart
+A.S.A.P always say a prayer
+You're A Cowboy Like Me Cowboy Boots
+At dawn we plan!
+Bring It On
+You Are Exactly Where You Need To Be
+Just Because my Dreams are Different
+With Great Power Comes Great Responsibility
+Our Love Is God
+Obstinate Headstrong Girl
+Be Strong And Courageous
+Play Dumb! Not That Dumb!
+Choose Happiness
+Welcome to the shitshow
+Pain is temporary a law degree is forever
+I've never meet someone who wasn't important
+Everything was beautiful and nothing hurt
+So Anyway I Started Blasting
+Don't bring an umbrella to a brainstorm
+I Like Big Books And I Cannot Lie
+ARE YOU THE CRIMINALS? FROM THE STATISTICS??
+Nurture Your Inner Garden
+paint with all the colors of the wind
+Dream me the world
+you've got the makings of greatness in you
+The Only Dangerous Minority Is The Rich
+Hold On to Each Other
+In The End Only Three Things Matter
+Stay Positive Love
+never let anybody make you feel ordinary
+This is a Safe Space
+you're only as pretty as you treat people
+libraries the most democratic thing
+You Really Think Death Can Stop Me?
+Fruits of the Spirit
+Silently Judging You
+It's a beautiful day in the neighborhood
+Don't Steal The Government Hates Competition
+Charisma, uniqueness, nerve and talent
+World's Okayest Loss Prevention Manager
+Words are our most inexhaustible source of magic
+Happiness is a choice, not a destination
+Your Holes Is My Goal Construction
+I Have Had Enough Nonsense
+Thankful for God's Amazing Grace
+will it be easy? nope. worth it? absolutely
+I'll Bring The Bad Decisions
+whatever is lovely
+don't break my heart
+when people say impossible, they usually mean improbable
+I'm fine. It's fine. Everything is fine.
+Always And Forever
+it's not the plane it's the pilot glasses
+HIGHLY CAFFEINATED & WILDLY AMBITIOUS
+Keep your friends close but your enemies closer
+My Dream Wouldn't Be Complete Without You
+Eat some Breakfast then Change the World
+Make it happen
+Everything Is A weapon If You're Brave Enough
+And I love you, random citizen Megamind
+honey you’ve never looked better
+IF IT MATTERS TO YOU IT'S IMPORTANT
+Know your own happiness
+I'm bad, and that's good
+I will never be good, and that's not bad
+There's no one I'd rather be than me
+You're kidding, right?
+The city needs me
+Oh, you're a villain, alright! Just not a super one
+as you can see, I'm a lot happier
+why can't you just die?
+This town isn't big enough for two supervillains!
