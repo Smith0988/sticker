@@ -8,10 +8,10 @@ def remove_duplicate_lines(input_file, output_file):
                 lines_seen.add(line)
 
 # Tệp gốc chứa các dòng trùng nhau
-input_file = "selected_lines_16_35.txt"
+input_file = "output_filtered_range.txt"
 
 # Tạo tệp mới chứa các dòng không trùng nhau
-output_file = "lines_without_duplicates.txt"
+output_file = "lines_without_duplicates_4_8.txt"
 
 remove_duplicate_lines(input_file, output_file)
 

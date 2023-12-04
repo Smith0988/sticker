@@ -14,6 +14,6 @@ with open(output_file, 'w', encoding='utf-8') as output:
         # Kiểm tra số lượng ký tự của hàng
         char_count = len(cleaned_line)
 
-        if char_count > 35:
+        if char_count < 16:
             # Nếu số lượng ký tự từ 16 đến 35, ghi vào tệp mới
             output.write(cleaned_line + '\n')

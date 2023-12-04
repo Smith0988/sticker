@@ -1,10 +1,15 @@
-# Đọc nội dung từ file chua_dung_long_lines_tren_8_tu.txt
-with open("unmatched_lines_8_tu.txt", "r", encoding="utf-8") as long_lines_file:
-    long_lines = long_lines_file.readlines()
+input_file_path = "output_diff.txt"
+output_filtered_large_path = "output_filtered_large.txt"
 
-# Lọc và giữ lại chỉ một dòng duy nhất nếu có hàng trùng nhau
-unique_lines = list(set(long_lines))
+# Đọc nội dung từ file input
+with open(input_file_path, 'r', encoding='utf-8') as input_file:
+    lines = input_file.readlines()
 
-# Ghi vào file mới
-with open("unique_short_lines.txt", "w", encoding="utf-8") as unique_file:
-    unique_file.write("\n".join(unique_lines))
+# Lọc các câu có số từ lớn hơn hoặc bằng 10
+filtered_large_lines = [line for line in lines if len(line.split()) >= 10]
+
+# Ghi kết quả ra file output_filtered_large
+with open(output_filtered_large_path, 'w', encoding='utf-8') as output_filtered_large_file:
+    output_filtered_large_file.writelines(filtered_large_lines)
+
+print("Các dòng có số từ lớn hơn hoặc bằng 10 đã được ghi vào", output_filtered_large_path)

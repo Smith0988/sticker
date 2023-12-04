@@ -52,6 +52,6 @@ def get_sticker_text(url):
 
 # Mở trang web
 
-for page in range(1, 101):
+for page in range(1, 108):
     url = f"https://www.redbubble.com/shop/?page={page}&query=quote%20sticker"
     get_sticker_text(url)
