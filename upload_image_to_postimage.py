@@ -250,7 +250,7 @@ def upload_image_to_postimage(sku_name, type):
     pyautogui.sleep(1)
     pyautogui.press("enter")
 
-    wait = WebDriverWait(driver, 120)
+    wait = WebDriverWait(driver, 220)
     upload_button = wait.until(EC.presence_of_element_located((By.XPATH, "//span[@id='uploadFile']")))
     upload_button.click()
     pyautogui.sleep(2)
@@ -261,9 +261,22 @@ def upload_image_to_postimage(sku_name, type):
 
     wait = WebDriverWait(driver, 220)
     copy_button = wait.until(
-        EC.presence_of_element_located((By.XPATH, "//button[@data-clipboard-target='#code_direct']")))
+        EC.presence_of_element_located((By.XPATH, "//span[@class='btn btn-sm btn-collapse collapsed']")))
     copy_button.click()
     pyautogui.sleep(2)
+
+
+
+
+    wait = WebDriverWait(driver, 220)
+    copy_button = wait.until(
+        EC.presence_of_element_located((By.XPATH, "//button[@data-clipboard-target='#code_direct']//i[@class='fa fa-clipboard']")))
+    copy_button.click()
+    pyautogui.sleep(2)
+
+
+
+
 
     copied_text = pyperclip.paste()
     pyautogui.sleep(2)
