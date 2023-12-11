@@ -169,7 +169,7 @@ def create_folder_and_copy_data():
     if not os.path.exists(new_folder_path):
         os.mkdir(new_folder_path)
 
-    source_directory = r"C:\Users\Cong Dinh\Desktop\Sticker Image"
+    source_directory = r"C:\Users\d\Desktop\Sticker Image"
 
     destination_directory = f"E:\\0.Sticker\\image_base\\{fd_name}"
     folders_to_copy = ["1. PSD", "2. Main", "3. ULR1", "4. ULR2", "5. PNG", "temp_data"]
