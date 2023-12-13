@@ -1,19 +1,13 @@
-# Đọc nội dung từ tệp "lines_without_person_remove_sticker&quotes.txt"
-with open('lines_without_person_remove_sticker&quotes.txt', 'r', encoding='utf-8') as file:
-    lines = file.readlines()
-
-# Tạo tệp mới để ghi các hàng thỏa điều kiện
-output_file = 'selected_lines.txt'
-
-# Mở tệp mới để ghi
-with open(output_file, 'w', encoding='utf-8') as output:
-    for line in lines:
-        # Loại bỏ khoảng trắng và ký tự xuống dòng từ đầu và cuối chuỗi
-        cleaned_line = line.strip()
-
-        # Kiểm tra số lượng ký tự của hàng
-        char_count = len(cleaned_line)
-
-        if char_count < 16:
-            # Nếu số lượng ký tự từ 16 đến 35, ghi vào tệp mới
-            output.write(cleaned_line + '\n')
+# Mở file unmatched_data_honk_keywork.txt để đọc
+with open('unmatched_data_honk_keywork.txt', 'r', encoding='utf-8') as input_file:
+    # Đọc từng dòng và kiểm tra độ dài
+    for line in input_file:
+        # Kiểm tra xem độ dài của câu là lớn hơn hay bằng 4
+        if len(line.strip()) >= 4:
+            # Nếu câu lớn hơn hoặc bằng 4, in ra file larger_than_4.txt
+            with open('larger_than_4.txt', 'a', encoding='utf-8') as larger_file:
+                larger_file.write(line)
+        else:
+            # Nếu câu nhỏ hơn 4, in ra file smaller_than_4.txt
+            with open('smaller_than_4.txt', 'a', encoding='utf-8') as smaller_file:
+                smaller_file.write(line)
