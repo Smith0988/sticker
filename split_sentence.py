@@ -110,10 +110,32 @@ def split_sentence_4_2_5_2(text):
     return split, product_name
 
 
+def split_sentence_chu_de(text, text_base):
+
+    sentence = re.sub(r'\s+', ' ', text_base).strip()
+
+    index = sentence.lower().find(text)
+
+    # Tách chuỗi thành hai phần
+    split_result = [
+        sentence[:index + len(text)].upper(),
+        sentence[index + len(text):].strip()
+    ]
+
+
+
+    split = [split_result[0], split_result[1], "1", "2", "3"]
+
+    product_name = "2Pcs - 5IN " + sentence + " Bumper Sticker" + " - " + sentence + " Sticker"
+
+    split = [item.upper() for item in split]
+
+    return split, product_name
+
+
 
 if __name__ == "__main__":
-    english_sentence = "it does not exist in nature, nor do the children of men as a whole experience it."
-    #result, product_name = split_sentence_2_3_and_3_3(english_sentence)
-    result, product_name = split_sentence_4_2_5_2(english_sentence)
+    english_sentence = "don't honk at me im popping my pimples"
+    result, product_name = split_sentence_chu_de("please don't honk at me", english_sentence)
     print(result)
     print(product_name)

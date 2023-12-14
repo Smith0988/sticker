@@ -115,17 +115,26 @@ def create_csv_to_photo():
                 break
             write_sentence_to_file(used_data, text)
             #write_sentence_to_file(temp_used_data, text)
-            list_split, product_name = split_sentence_2_3_and_3_3(text)
+
+            #list_split, product_name = split_sentence_2_3_and_3_3(text)
+
+            list_split, product_name = split_sentence_chu_de("don't honk at me", text)
 
             #list_split, product_name = split_sentence_4_2_5_2(text)
+
             sku = export_file_to_csv(list_split, text)
             time.sleep(1)
             sku_list.append(sku)
             product_name_list.append(product_name)
 
 
+
+    if os.path.exists(name_size_1):
+        move_csv_temp_file("NameSize_1.csv")
+
     if os.path.exists(name_size_2):
         move_csv_temp_file("NameSize_2.csv")
+
     if os.path.exists(name_size_2_change):
         move_csv_temp_file("NameSize_2_change.csv")
 
@@ -142,6 +151,9 @@ def create_csv_to_photo():
 
     if os.path.exists(temp_used_data):
         move_txt_temp_file("temp_sentence_used.txt")
+
+    if os.path.exists(temp_used_data_1):
+        move_txt_temp_file(temp_used_data_1, "temp_sentence_used_1.txt")
 
 
     if os.path.exists(temp_used_data_2):
