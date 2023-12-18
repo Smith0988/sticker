@@ -116,9 +116,9 @@ def create_csv_to_photo():
             write_sentence_to_file(used_data, text)
             #write_sentence_to_file(temp_used_data, text)
 
-            list_split, product_name = split_sentence_2_3_and_3_3(text)
+            #list_split, product_name = split_sentence_2_3_and_3_3(text)
 
-            #list_split, product_name = split_sentence_chu_de("Please Be Patient ", text)
+            list_split, product_name = split_sentence_chu_de("Don't Make Me Use d ", text)
 
             #list_split, product_name = split_sentence_4_2_5_2(text)
 
