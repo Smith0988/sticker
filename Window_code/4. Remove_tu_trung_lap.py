@@ -1,5 +1,5 @@
 # Tạo một list chứa các cụm từ cần kiểm tra
-phrases_to_check = ["Coffee"]
+phrases_to_check = ["SITTING ON ME"]
 
 # Tạo một tập hợp để theo dõi các câu đã xuất hiện
 seen_phrases = set()

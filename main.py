@@ -118,7 +118,7 @@ def create_csv_to_photo():
 
             #list_split, product_name = split_sentence_2_3_and_3_3(text)
 
-            list_split, product_name = split_sentence_chu_de("World's ", text)
+            list_split, product_name = split_sentence_chu_de("Sorry I'm Late ", text)
 
             #list_split, product_name = split_sentence_4_2_5_2(text)
 
