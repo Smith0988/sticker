@@ -10,7 +10,7 @@ def process_file(input_filename, output_large_filename, output_small_filename):
 
         for line in input_file:
             word_count = count_words(line)
-            if word_count >= 4:
+            if word_count >= 3:
                 output_large_file.write(line)
             else:
                 output_small_file.write(line)
